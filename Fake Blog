@@ -52,10 +52,10 @@
 
 			<p>I would like to recieve these emails...</p>
 			<label for="weekly">Every week</label>
-			<input type="radio" id="weekly" name="frequency" vale="weekly">
+			<input type="radio" id="weekly" name="frequency" value="weekly">
 
 			<label for="monthly">Once a month is fine...</label>
-			<input type="radio" id="month" name="frequency" value="monthly">
+			<input type="radio" id="monthly" name="frequency" value="monthly">
 
 			<p>I would also like to sign up for:</p>
 			<label for="company_updates">Company Updates</label>
