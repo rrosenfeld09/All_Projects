@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Form</title>
+	</head>
+	<body>
+		<h1>Registration Form</h1>
+		<form action = "process.php" method = "post">
+			<label for = "first_name">First Name:</label>
+			<input type="text" id="first_name" name="first_name">
+			<p>
+			<label for="last_name">Last Name:</label>
+			<input type="text" id="last_name" name="last_name">
+			</p>
+			<p>
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email">
+			</p>
+			<p>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password">
+			</p>
+			<p>
+			<label for="password2">PW Confirm:</label>
+			<input type="password" id="password2" name="password2">
+			</p>
+			<p>
+			<label for="date">Birthday:</label>
+			<input type="date" id="date" name="date">
+			</p>
+			<p>
+			<label for="male">Male</label>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="female">Female</label>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="other">Other</label>
+			<input type="radio" id="other" name="gender" value="other">
+			</p>
+			<p>
+			<label for ="description">A Short Description of Yourself:</label>
+			</p>
+			<p>
+			<textarea name="description" id="description"></textarea>
+			</p>
+			<p>
+			<label for="language">Favorite Language:</label>
+			<select name="language" id ="language">
+				<option value="JavaScript">JavaScript</option>
+				<option value="Python">Python</option>
+				<option value ="Java">Java</option>
+			</select>
+			</p>
+			<p>
+			<input type="submit" name="Click to Submit">
+			</p>
+		</form>
+	</body>
