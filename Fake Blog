@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>A Quick History of SpaceX</title>
+		<meta name="description" content="This blog entry goes over a short history of and some recent statistics regarding to the private aerospace company SpaceX">
+	</head>
+	<body>
+		<h1>A Quick History of SpaceX</h1>
+		<img src="http://spacenews.com/wp-content/uploads/2018/02/fh-launch-spx.jpg" alt="A picture of a rocket launch">
+		<p>
+			SpaceX was founded in 2002 by entrepreneur Elon Musk in an attmept to make commercial space flight more affordable and to help promote the mission of putting a human on Mars.  
+		</p>
+		<a href="http://www.spacex.com/">Click Here to go to the Official SpaceX Website</a>
+		<h2>Launch Highlight History</h2>
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th>Date of Launch</th>
+						<th>Rocket Model</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>9/28/08</td>
+						<td>Falcon 1</td>
+					</tr>
+					<tr>
+						<td>12/3/13</td>
+						<td>Falcon 9</td>
+					</tr>
+					<tr>
+						<td>6/3/17</td>
+						<td>Falcon 9</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<h2>A Couple Notable Setbacks</h2>
+		<div>
+			<ul>
+				<li>In 2013, a Dragon spacecraft lost full control of it's thrusters. This rendered the spacecraft uncontrollable.</li>
+				<li>In 2016, a Falcon 9 rocket blew up during a standard static fire test</li>
+			</ul>
+		</div>
+		<form action="process.php" method="post">
+			<h2>If you'd like to register for lanch updates, please sign up below!</h2>
+
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email">
+
+			<p>I would like to recieve these emails...</p>
+			<label for="weekly">Every week</label>
+			<input type="radio" id="weekly" name="frequency" vale="weekly">
+
+			<label for="monthly">Once a month is fine...</label>
+			<input type="radio" id="month" name="frequency" value="monthly">
+
+			<p>I would also like to sign up for:</p>
+			<label for="company_updates">Company Updates</label>
+			<input type="checkbox" id="company_updates" name="other_updates" value="company_updates">
+
+			<label for="merchandise_sales">Merchandise Sales</label>
+			<input type="checkbox" id ="merchandise_sales" name="other_updates" value="merchandise_sales">
+
+			<input type="submit" name="Click here to sign up!">
+
+		</form>
+		<div>
+			<p>
+				Source used for info: <a href="https://en.wikipedia.org/wiki/SpaceX">Wikipedia</a>
+			</p>
+		</div>
+	</body>
+</html>
