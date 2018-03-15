@@ -1,6 +1,6 @@
 .wrapper{
 	width: 950px;
-	background-color: navy;
+	background-color: #1c345d;
 	margin: 0px auto;
 	padding: 15px;
 
@@ -9,7 +9,7 @@
 	background-color: red;
 	border-radius: 10px;
 	padding: 1px;
-	color: white;
+	color: #c2d7eb;
 	opacity: 0.9;
 
 }
@@ -17,7 +17,7 @@
 .menu{
 	height: 250px;
 	width: 185px;
-	background-color: turquoise;
+	background-color: #297c8c;
 	display: inline-block;
 	vertical-align: top;
 	border-radius: 15px;
@@ -30,17 +30,27 @@
 	text-align: left;
 }
 
+.menu_items {
+	padding-top: 10px;
+}
+
+
+.menu ul{
+	padding-left: 19px;
+	padding-top: 0px;
+}
+
 
 .main_content{
 	height: 450px;
 	width: 700px;
-	background-color: black;
+	background-color: #0e1722;
 	display: inline-block;
 	margin-left: 35px;
 	border-radius: 15px;
 	margin-top: 15px;
 	opacity: 0.9;
-	color: white;
+	color: #bdd2e6;
 	padding: 10px;
 	font-size: 12px;
 
@@ -62,7 +72,7 @@
 .bottom{
 	width: 945px;
 	height: 35px;
-	background-color: gray;
+	background-color: #5e6573;
 	border-radius: 10px;
 	margin-top: 15px;
 	opacity: 0.9;
@@ -72,6 +82,6 @@
 }
 
 .bottom span{
-	color: turquoise;
+	color: #297c8c;
 	text-decoration: underline;
 }
