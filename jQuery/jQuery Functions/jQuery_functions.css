@@ -1,0 +1,95 @@
+.wrapper{
+	width: 950px;
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #3c4b5b;
+}
+
+.wrapper h1{
+	text-align: center;
+	color: white;
+	font-size: 30px;
+}
+
+.wrapper h2{
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+
+
+.function_ex{
+	width: 700px;
+	height: auto;
+	background-color: #f1f1f1;
+	margin-left: 120px;
+	border-radius: 7px;
+}
+
+.function_ex p {
+	display: inline-block;
+	margin-bottom: 11px;
+	margin-left: 25px;
+}
+
+h3{
+	text-align: center;
+	font-size: 20px;
+	padding-top: 7px;
+	margin-bottom: 2px;
+}
+
+button{
+	vertical-align: bottom;
+	margin-left: 25px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.slideDown{
+	display: none;
+
+}
+
+.function_ex_class{
+	width: 700px;
+	height: auto;
+	background-color: #f1f1f1;
+	margin-left: 120px;
+	border-radius: 7px;
+}
+
+.function_ex_class p {
+	display: inline-block;
+	margin-bottom: 11px;
+	margin-left: 25px;
+}
+
+.jQuery_pic{
+	width: 75px;
+	display: none;
+}
+
+.jQuery_pic2{
+	width: 75px;
+}
+
+.jQuery_pic3{
+	width: 75px;
+}
+
+.jQuery_blue{
+	width: 75px;
+	display: none;
+}
+
+.jQuery_blue2{
+	width: 75px;
+}
+.jQuery_big{
+	width: 115px;
+}
+
+.data_attach{
+	text-align: center;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="jQuery_functions.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+	 	 $(document).ready(function(){
+	     	 $(".click").click(function(){
+	     	 	alert("Nice! You used the click event jQuery function!");
+	     	 });
+	     	 $(".hide_button").click(function(){
+	     	 	$(".hide").hide();
+	     	 });
+	     	 $(".show_button").click(function(){
+	     	 	$(".hide").show();
+	     	 });
+	     	 $(".toggle_button").click(function(){
+	     	 	$(".toggle").toggle();
+	     	 });
+	     	 $(".slideDown_button").click(function(){
+	     	 	$(".jQuery_pic").slideDown();
+	     	 });
+	     	 $(".slideUp_button").click(function(){
+	     	 	$(".jQuery_pic2").slideUp();
+	     	 });
+
+	     	 $(".slideToggle_button").click(function(){
+	     	 	$(".jQuery_pic3").slideToggle();
+	     	 });
+
+	     	 $(".fadeIn_button").click(function(){
+	     	 	$(".jQuery_blue").fadeIn();
+	     	 });
+	     	 $(".fadeOut_button").click(function(){
+	     	 	$(".jQuery_blue2").fadeOut();
+	     	 });
+
+	     	 $(".class_button").click(function(){
+	     	 	$(".function_ex_class p").addClass("newClass");
+	     	 });
+	     	 $(".before_button").click(function(){
+	     	 	$(".before_test").before("<p>*I insert content BEFORE an element!*</p>");
+	     	 });
+	     	 $(".after_button").click(function(){
+	     	 	$(".after_test").after("<p>*I insert content AFTER an element!*");
+	     	 });
+	     	 $(".append_button").click(function(){
+	     	 	$(".append_test").append(".....I add things to the end of an element!")
+	     	 });
+	     	 $(".html_button").click(function(){
+	     	 	$(".html_test").html("<p>I set the contents of a specified HTML element!</p>");
+	     	 });
+	     	 $(".attr_button").click(function(){
+	     	 	$(".jQuery_big").attr("alt", "yet another picture of jQuery logo!")
+	     	 });
+	     	 $(".val_button").click(function(){
+	     	 	$("input:text").val("Woohoo!");
+	     	 });
+	     	 $(".text_button").click(function(){
+	     	 	$(".text_test").text("bon travail!");
+	     	 });
+	     	 $(".data_button").click(function(){
+	     	 	$(".data_attach").data("test", {first:"San Diego, CA", last:"Austin, TX"});
+				$("span:first").text($(".data_attach").data("test").first);
+				$("span:last").text($(".data_attach").data("test").last);
+	     	 });
+
+		  });
+		</script>
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h1>jQuery Functions</h1>
+			<h2>Open your browser console to see how I work!</h2>
+			<div class = "function_ex">
+				<h3>.click</h3>
+				<button type = "button"  class = "click">Click me!</button>
+				<p>When you click this button, I'll send an alert!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.hide</h3>
+				<button type = "button" class = "hide_button">Click me!</button>
+				<p class = "hide">When you click this button, this sentence will disappear!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.show</h3>
+				<button type = "button" class = "show_button">Click me!</button>
+				<p class = "show">Click me and I'll make the sentance above reappear!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.toggle</h3>
+				<button type = "button" class = "toggle_button">Click me!</button>
+				<p class = "toggle">Click this button to make this sentence disappear and reappear!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.slideDown</h3>
+				<button type = "button" class = "slideDown_button">Click me!</button>
+				<img class = "jQuery_pic" src="./Images/jQuery.gif" alt = "picture of jQuery logo">
+				<p>Click this button and a picture will appear!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.slideUp</h3>
+				<button type = "button" class = "slideUp_button">Click me!</button>
+				<img class = "jQuery_pic2" src="./Images/jQuery.gif" alt = "picture of jQuery logo">
+				<p>Click this button and the image will disappear!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.slideToggle</h3>
+				<button type = "button" class = "slideToggle_button">Click me!</button>
+				<img class = "jQuery_pic3" src="./Images/jQuery.gif" alt = "picture of jQuery logo">
+
+				<p class = "slideToggle">Hello! Click me and to toggle the image!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.fadeIn</h3>
+				<button type = "button" class = "fadeIn_button">Click me!</button>
+				<img class = "jQuery_blue" src="./Images/jQuery_blue.png" alt = "picture of jQuery logo">
+				<p>Click the button to fade in the image!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.fadeOut</h3>
+				<button type = "button" class = "fadeOut_button">Click me!</button>
+				<img class = "jQuery_blue2" src="./Images/jQuery_blue.png" alt = "picture of jQuery logo">
+				<p>Click the button to fade out the image!</p>
+			</div>
+			<div class = "function_ex_class">
+				<h3>.addClass</h3>
+				<button type = "button" class = "class_button">Click me!</button>
+				<p>First, make sure the console is open, then click me to add a class to this p tag!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.before</h3>
+				<button type = "button" class = "before_button">Click me!</button>
+				<p class = "before_test">Click me and see what happens!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.after</h3>
+				<button type = "button" class = "after_button">Click me!</button>
+				<p class = "after_test">Click me and see what happens!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.append</h3>
+				<button type = "button" class = "append_button">Click me!</button>
+				<p class = "append_test">I wonder what this does...</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.html</h3>
+				<button type = "button" class = "html_button">Click me!</button>
+				<p class = "html_test">First, make sure the console is open...then click and see what I do!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.attr</h3>
+				<button type = "button" class = "attr_button">Click me!</button>
+				<img class = "jQuery_big" src="./Images/jquery_big.png">
+				<p>Make sure the console is open, then click this button and I'll add an image attribute!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.val</h3>
+				<button type = "button" class = "val_button">Click me!</button>
+				<p class = "val_test">Type something, then click the button: <input type = "text" name = "user"></p>
+				<p>.val will set the value of a matched element! In this case, the value is "Woohoo!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.text</h3>
+				<button type = "button" class = "text_button">Click me!</button>
+				<p class = "text_test">Change this text to French!</p>
+			</div>
+			<div class = "function_ex">
+				<h3>.data</h3>
+				<button type = "button" class = "data_button">Click me!</button>
+				<p>Click button to attach data to the div element. Remember to check the console!</p>
+				<div class = "data_attach">My favorite two cities are <span>_____</span> and <span>_____</span></div>
+			</div>
+		</div>
+	</body>
+</html>
