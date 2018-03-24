@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Disappearing Spaceships</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("img").click(function(){
+					$(this).css('visibility', 'hidden');
+				});
+				$("button").click(function(){
+					$("img").css('visibility', 'visible');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h3>Click on the Spaceships to Make Them Disappear!</h3>
+			<div class = "all_images">
+				<img src="Spaceship.png" alt = "picture of spaceship">
+				<img src="Spaceship.png" alt = "picture of spaceship">
+				<img src="Spaceship.png" alt = "picture of spaceship">
+				<img src="Spaceship.png" alt = "picture of spaceship">
+				<img src="Spaceship.png" alt = "picture of spaceship">
+				<img src="Spaceship.png" alt = "picture of spaceship">
+				<img src="Spaceship.png" alt = "picture of spaceship">
+				<img src="Spaceship.png" alt = "picture of spaceship">
+			</div>
+			<button type = "button">RESTORE</button>
+		</div>
+	</body>
+</html>

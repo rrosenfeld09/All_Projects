@@ -1,0 +1,32 @@
+.wrapper{
+	width: 900px;
+	padding: 15px;
+	margin: 0px auto;
+	background-color: #009ac7;
+}
+
+h3{
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.all_images{
+	width: 800px;
+	/*border: 2px dotted red;*/
+	margin-left: 126px;
+}
+
+img{
+	width: 160px;
+
+}
+
+button{
+	width: 100px;
+	height: 40px;
+	background-color: #e06565;
+	border-radius: 10px;
+	/*border: none;*/
+	box-shadow: 4px 2px;
+}
