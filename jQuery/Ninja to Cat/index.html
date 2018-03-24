@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ninja to Cat</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("img").click(function(){
+					$(this).attr("place_holder", $(this).attr("src"));
+					$(this).attr("src", $(this).attr("data-alt-src"));
+				});
+
+			});
+
+		</script>
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h2>Click on Images to Change!</h2>
+			<img src="./Images/ninja0.png" data-alt-src = "./Images/cat0.png" place_holder ="" alt = "picture of ninja">
+			<img src="./Images/ninja1.png" data-alt-src = "./Images/cat1.png" place_holder ="" alt = "picture of nina">
+			<img src="./Images/ninja2.png" data-alt-src = "./Images/cat2.png" place_holder ="" alt = "picture of ninja">
+			<img src="./Images/ninja3.png" data-alt-src = "./Images/cat3.png" place_holder ="" alt = "picture of ninja">
+			<img src="./Images/ninja4.png" data-alt-src = "./Images/cat4.png" place_holder ="" alt = "picture of ninja">
+		</div>
+	</body>
+</html>

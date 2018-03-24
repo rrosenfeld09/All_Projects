@@ -1,0 +1,18 @@
+.wrapper{
+	width: 300px;
+	background-color: #f1f4f8;
+	padding: 15px;
+	margin: 0px auto;
+}
+
+
+img{
+	width: 180px;
+	display: block;
+	margin-bottom: 5px;
+	margin-left: 52px;
+}
+
+h2{
+	text-align: center;
+}
