@@ -1,3 +1,11 @@
+.wrapper{
+	width: 500px;
+	background-color: #009ac7;
+	margin: 0px auto;
+	padding: 15px;
+}
+
+
 p{
 	display: inline-block;
 	margin-right: 25px;
@@ -17,6 +25,7 @@ input{
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	width: 150px;
 }
 
 h2{
@@ -48,4 +57,12 @@ form{
 
 h1{
 	margin-bottom: 0px;
+}
+
+.submit_button{
+	width: 67px;
+	margin-left: 88px;
+	border-radius: 2px;
+	box-shadow: 1px 1px;
+
 }

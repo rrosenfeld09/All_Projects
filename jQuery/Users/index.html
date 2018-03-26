@@ -19,25 +19,31 @@
 		</script>
 	</head>
 	<body>
-		<h1>Current Users</h1>
-		<div class = "line1"></div>
-		<table>
-			<tr class = "titles">
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email Address</th>
-				<th>Contact #</th>
-			</tr>
-		</table>
-		<div class = "new_info" ></div>
-		<h2>Add User</h2>
-		<div class = "line2"></div>
-		<form action = "process.php" method = "post">
-			First Name:<input type="text" name="first_name">
-			Last Name:<input type="text" name="last_name">
-			Email Address:<input type="text" name="email_address">
-			Contact #:<input type="text" name="contact_num">
-			<input class = "submit_button" type="submit" name="submit" value="add user">
-		</form>
+		<div class = "wrapper">
+			<h1>Current Users</h1>
+			<div class = "line1"></div>
+			<table>
+				<tr class = "titles">
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+					<th>Contact #</th>
+				</tr>
+			</table>
+			<div class = "new_info" ></div>
+			<h2>Add User</h2>
+			<div class = "line2"></div>
+			<form action = "process.php" method = "post">
+				<label>First Name:</label>
+				<input type="text" placeholder="First Name" name="first_name">
+				<label>Last Name:</label>
+				<input type="text" placeholder="Last Name" name="last_name">
+				<label>Email Address:</label>
+				<input type="text" placeholder="Email Address" name="email_address">
+				<label>Contact #:</label>
+				<input type="text" placeholder = "Phone number" name="contact_num">
+				<input class = "submit_button" type="submit" name="submit" value="add user">
+			</form>
+		</div>	
 	</body>
 </html>
