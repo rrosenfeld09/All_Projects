@@ -1,0 +1,80 @@
+#wrapper{
+	width: 960px;
+	margin: 0px auto;
+	padding: 15px;
+	background: linear-gradient(to right, #24292e, #404448); 
+}
+
+h1{
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.input{
+	width: 337px;
+	height: 600px;
+/*	border: 2px dotted red;
+*/	display: inline-block;
+	margin-right: 48px;
+	margin-left: 12px;
+	vertical-align: top;
+}
+
+.cards{
+	width: 450px;
+	height: 600px;
+/*	border: 2px dotted red;
+*/	display: inline-block;
+	margin-left: 91px;
+}
+
+form{
+	margin-top: 55px;
+}
+
+label{
+	font-size: 25px;
+	color: white;
+}
+
+input{
+	font-size: 17px;
+	margin-bottom: 25px;
+}
+
+.description{
+	width: 217px;
+	height: 82px;
+	margin-top: 26px;
+	display: block;
+	 box-sizing: border-box;
+	 resize: none;
+
+}
+
+h3{
+	color: white;
+	text-align: center;
+}
+
+h5{
+	color: white;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.contact_card{
+	width: 310px;
+	height: 125px;
+	padding: 10px;
+	border: 2px solid black;
+	margin-left: 123px;
+	margin-bottom: 40px;
+}
+
+.button{
+	border-radius: 2px;
+	box-shadow: 3px 3px;
+}
+
