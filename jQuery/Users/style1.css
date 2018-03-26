@@ -1,0 +1,51 @@
+p{
+	display: inline-block;
+	margin-right: 25px;
+	text-align: center;
+}
+
+table{
+	border: 2px solid black;
+	margin-top: 10px;
+}
+
+th{
+	padding-right: 15px;
+}
+
+input{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+h2{
+	margin-top: 80px;
+	margin-bottom: 5px;
+}
+
+form{
+	margin-top: 10px;
+}
+
+.titles{
+	text-decoration: underline;
+}
+
+.line1{
+	width: 200px;
+	height: 2px;
+	background-color: black;
+	margin-bottom: 15px;
+}
+
+.line2{
+	width: 200px;
+	height: 2px;
+	background-color: black;
+
+}
+
+h1{
+	margin-bottom: 0px;
+}
