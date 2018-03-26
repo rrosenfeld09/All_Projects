@@ -17,20 +17,20 @@
           $(document).ready(function(){
              $('#large_box').click(function(){
                 // alert('you clicked the big box!');  
-                $("#large_box").css("background-color", random_color());
-                $("#large_box").children().css("background-color", random_color());
+                $(this).css("background-color", random_color());
+                $(this).children().css("background-color", random_color());
              });
 
 
              $('.side_box').click(function(event){
                 event.stopPropagation();
-                $(".side_box").siblings().css("background-color", random_color());
+                $('.side_box').siblings().css("background-color", random_color());
              });
 
 
              $('.middle_box').click(function(event){
                 event.stopPropagation();
-                $(".middle_box").parent().css("background-color", random_color());
+                $(this).parent().css("background-color", random_color());
 
              });
 
