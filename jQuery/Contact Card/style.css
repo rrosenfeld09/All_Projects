@@ -39,17 +39,17 @@ label{
 }
 
 input{
-	font-size: 17px;
+	font-size: 15px;
 	margin-bottom: 25px;
 }
 
-.description{
+textarea{
 	width: 217px;
 	height: 82px;
 	margin-top: 26px;
 	display: block;
-	 box-sizing: border-box;
-	 resize: none;
+	margin-bottom: 15px;
+
 
 }
 
@@ -78,3 +78,8 @@ h5{
 	box-shadow: 3px 3px;
 }
 
+
+.new_card{
+	color: red;
+	word-wrap: break-word;
+}

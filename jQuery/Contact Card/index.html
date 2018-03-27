@@ -6,17 +6,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 			
-			function flip_card(){
-				$(".desc_button").click(function(){
-					$(this).siblings().html($('input[name="description"]').val());
-					$(this).html("");
-				});
-			}
 			$(document).ready(function(){
 				$(document).on("click", ".button", function(){
-					$(".cards").append("<div class = 'contact_card'><h3>" + $('input[name="first_name"]').val() + " " + $('input[name="last_name"]').val() + "<h5 class = 'desc_button'>Click for description!</h5>" + "</div>" );
-						flip_card();
+					var first = $('input[name="first_name"]').val()
+					var last = $('input[name="last_name"]').val()
+					$(".cards").append("<div class = 'contact_card'><h3>" + first + " " + last + "<h5 class = 'desc_button'>Click for description!</h5>" + "</div>" );
 					return false
+				});
+				$(document).on("click", ".desc_button", function(){
+					$(this).siblings().html("<div class = 'new_card'>" + $('textarea').val() +"</div>");
+					$(this).html("");
 				});
 			});
 		</script>
@@ -27,11 +26,11 @@
 			<div class = "input">
 				<form action = "process.php" method = "post">
 					<label>First Name:</label>
-					<input type="text" placeholder="First Name" name="first_name">
+					<input type="text" placeholder="first name" name="first_name">
 					<label>Last Name:</label>
-					<input type="text" placeholder = "Last Name" name="last_name">
+					<input type="text" placeholder = "last name" name="last_name">
 					<label>Description:</label>
-					<input class = "description" type="text" placeholder="Enter description" name="description">
+					<textarea maxlength="150" placeholder="write a description"></textarea>
 					<input class = "button" type="submit" name="sumbit"	value = "add user">
 				</form>		
 			</div>
