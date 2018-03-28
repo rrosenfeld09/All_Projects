@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pokemon Images</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				for (var x = 1; x < 152; x++){
+					$(".pictures").append("<img src='http://pokeapi.co/media/sprites/pokemon/" + x + ".png'>");
+					console.log(x);
+				};
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Pokemon Images Displayed with API</h1>
+		<div class = "pictures"></div>
+	</body>
+</html>
