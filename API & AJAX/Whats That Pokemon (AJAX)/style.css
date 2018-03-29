@@ -1,0 +1,48 @@
+#wrapper{
+	width: 950px;
+	padding: 15px;
+	margin: 0px auto;
+	background-color: #363232;
+}
+
+h1{
+	text-align: center;
+	color: white;
+}
+
+h2{
+	text-align: center;
+	color: white;
+	font-style: italic;
+}
+
+.pictures{
+/*	border: 2px dotted red;
+*/	width: 705px;
+	display: inline-block;
+}
+
+.info{
+	height: 435px;
+	width: 205px;
+	border: 6px solid #afd24b;
+	display: inline-block;
+	vertical-align: top;
+	color: white;
+	text-transform: capitalize;
+	padding: 10px;
+}
+
+.name{
+	text-align: center;
+}
+
+.info img{
+	margin-left: 55px;
+}
+
+
+
+
+
+

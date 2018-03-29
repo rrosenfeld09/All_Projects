@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What's That Pokemon</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			for (var x = 1; x < 152; x++){
+				$(".pictures").append("<img id ='" + x + "'" + "src = 'http://pokeapi.co/media/sprites/pokemon/" + x + ".png'>" );
+			};
+
+			$("img").click(function(){
+
+				$(".info").html("<img id ='" + x + "'" + "src = 'http://pokeapi.co/media/sprites/pokemon/" + this.id + ".png'>"); 
+
+				$.get("https://www.pokeapi.co/api/v2/pokemon/"+this.id, function(res){
+
+					var name_str = "<h3 class = 'name'>Name: " + res.name + "</h3>";
+					$(".info").append(name_str);
+
+					var html_str = ""
+					html_str += "<h3>Types:</h3>";
+					html_str += "<ul>";
+
+					for(var i = 0; i < res.types.length; i++){
+						html_str += "<li>" + res.types[i].type.name + "</li>";
+						console.log(res.types[i].type.name);
+						console.log(res.name);
+						console.log(res.height);
+						console.log(res.weight);
+					};
+					html_str += "</ul>";
+
+					$(".info").append(html_str);
+
+					$(".info").append("<h3>Height: </h3>" + "<p>" + res.height + "</p>");
+
+					$(".info").append("<h3>Weight: </h3>" + "<p>" + res.weight + "</p>");
+
+				}, "json");
+
+				});
+		});
+	</script>
+</head>
+<body>
+	<div id = "wrapper">
+		<h1>What's That Pokemon?! - With AJAX</h1>
+		<h2>Click on a Pokemon to get some info!</h2>
+		<div class = "pictures"></div>
+		<div class = "info"></div>
+	</div>
+</body>
+</html>
