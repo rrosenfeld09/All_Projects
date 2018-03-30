@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Weather Forecast Application</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+
+				
+				$(document).on("click", ".submit_button", function(){
+
+
+					$.get("https://api.openweathermap.org/data/2.5/weather?q=" + $(".input").val() + ",us&units=imperial&&appid=99f5127fb777774328a4635e435a0a33", function(res){
+
+						console.log(res);
+						console.log(res.main.temp);
+
+
+						var html_string = ""
+
+						html_string += `
+						<h2>${res.name}</h2>
+						<p>It's currently ${res.main.temp} degrees outside. Today has a high of ${res.main.temp_max} and a low of ${res.main.temp_min}!
+						`
+						$(".report").html(html_string);
+
+					}, "json");
+
+					return false;
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div id = "wrapper">
+			<h1>Weather Forecast</h1>
+			<form>
+				<label>Enter City: </label>
+				<input class = "input" type="text" placeholder = "city name" name="city">
+				<input class = "submit_button" type="submit" name="Get weather report!">
+			</form>
+			<div class = "report"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+#wrapper{
+	width: 950px;
+	margin: 0px auto;
+	padding: 15px;
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+h1{
+	text-align: center;
+	color: white;
+	font-size: 40px;
+	font-weight: 550;
+}
+
+.report{
+	width: 475px;
+	height: 150px;
+	/*border: 2px dotted red;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+form{
+	/*border: 2px dotted red;*/
+	/*display: inline-block;*/
+	vertical-align: top;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 20px;
+}
+
+.input{
+	font-size: 15px;
+}
+
+h2{
+	text-align: center;
+	color: white;
+	text-decoration: underline;
+}
+
+p{
+	color: white;
+	font-size: 23px;
+	text-align: center;
+}
+
+.submit_button{
+box-shadow: 3px 4px 8px #888888;	
+width: 60px;
+}
