@@ -1,0 +1,75 @@
+.wrapper{
+	width: 950px;
+	margin: 0px auto;
+	padding: 15px;
+	background: linear-gradient(#0e1b2b, #0f3150);
+}
+
+h1{
+	text-align: center;
+	color: white;
+	font-family: cursive;
+
+}
+
+img{
+	width: 234px;
+	vertical-align: top;
+}
+
+h3{
+	display: inline-block;
+	color: white;
+	margin-right: 65px;
+	margin-left: 42px;
+	font-style: italic;
+	font-family: cursive;
+
+}
+
+.last{
+	margin-left: 62px;
+	margin-right: 58px;
+}
+
+.house_details{
+
+	width: 400px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid white;
+	text-align: center;
+	color: white;
+
+}
+
+h2{
+	margin-top: 80px;
+	text-align: center;
+	color: white;
+	text-decoration: underline;
+	font-family: cursive;
+
+
+
+}
+
+.directions{
+	margin-top: 15px;
+	font-family: cursive;
+
+}
+
+.lannister{
+	height: 131px;
+}
+
+.footer{
+	margin-left: 84px;
+}
+
+.logo{
+	width: 400px;
+	margin-left: 271px;
+}
