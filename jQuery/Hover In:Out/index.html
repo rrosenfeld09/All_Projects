@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hover In/Out</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+
+			$(document).ready(function(){
+
+				$(".camry").hover(function(){
+
+					this.src = "./Images/camry_right.png";
+
+				}, function(){
+					this.src = "./Images/camry_left.jpg";
+				});
+
+				$(".civic").hover(function(){
+
+					this.src = "./Images/civic_right.png";
+
+				}, function(){
+					this.src = "./Images/civic_left.jpg";
+				});
+
+				$(".pilot").hover(function(){
+
+					this.src = "./Images/pilot_right.jpg";
+
+				}, function(){
+					this.src = "./Images/pilot_left.png";
+				});
+
+				$(".RAV4").hover(function(){
+
+					this.src = "./Images/RAV4_right.jpg";
+
+				}, function(){
+					this.src = "./Images/RAV4_left.png";
+				});
+
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h1>Hover In/Out</h1>
+			<div class = "images">
+				<img class = "camry" src="./Images/camry_left.jpg" alt = "picture of camry">
+				<img class = "civic" src="./Images/civic_left.jpg" alt="picture of civic">
+				<img class = "pilot" src="./Images/pilot_left.png" alt="picture of pilot">
+				<img class = "RAV4" src="./Images/RAV4_left.png" alt="picture of RAV4">
+			</div>
+			<div>
+				<p>Camry Image Source: https://www.paulytoyota.com</p>
+				<p>Civic Image Source: https://www.hondanorth.com</p>
+				<p> Pilot Image Source: https://www.cars.com</p>
+				<p>RAV4 Image Source: https://www.findlaytoyota.com</p>
+			</div>
+		</div>
+	</body>
+</html>
