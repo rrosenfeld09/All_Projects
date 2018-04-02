@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 	<head>
 		<title>Weather Forecast Application</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -21,7 +21,7 @@
 
 						html_string += `
 						<h2>${res.name}</h2>
-						<p>It's currently ${res.main.temp} degrees outside. Today has a high of ${res.main.temp_max} and a low of ${res.main.temp_min}!
+						<p class = 'weather_nums'>It's currently ${res.main.temp} degrees outside. Today has a high of ${res.main.temp_max} and a low of ${res.main.temp_min}!
 						`
 						$(".report").html(html_string);
 
@@ -43,5 +43,6 @@
 			</form>
 			<div class = "report"></div>
 		</div>
+		<a href="https://api.openweathermap.org"><p id = "citation">Powered By OpenWeatherMap API</p></a>
 	</body>
 </html>

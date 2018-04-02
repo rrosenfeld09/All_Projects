@@ -40,7 +40,7 @@ h2{
 	text-decoration: underline;
 }
 
-p{
+.weather_nums{
 	color: white;
 	font-size: 23px;
 	text-align: center;
@@ -49,4 +49,8 @@ p{
 .submit_button{
 box-shadow: 3px 4px 8px #888888;	
 width: 60px;
+}
+
+p{
+	text-align: center;
 }
