@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ninjas</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = './style/style_ninja.css') }}">
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h1>Now Type the a Specific Ninja's Color to See the Image Larger! Like This...</h1>
+			<h2>localhost:5000/ninja/blue</h2>
+			<div class = "titles">
+				<p>Donatello</p>
+				<p id = "second">Leonardo</p>
+			</div>
+			<img src="{{ url_for('static', filename = './images/donatello.jpg') }}">
+			<img class = "leo" src="{{ url_for('static', filename = './images/leonardo.jpg') }}">
+			<div class = "titles">
+				<p>Michelangelo</p>
+				<p id = "fourth">Raphael</p>
+			</div>
+			<img class = "mike" src="{{ url_for('static', filename = './images/michelangelo.jpg') }}">
+			<img src="{{ url_for('static', filename = './images/raphael.jpg') }}">
+		</div>
+	</body>
+</html>

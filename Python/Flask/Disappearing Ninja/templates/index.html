@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Landing Page</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = './style/style_index.css') }}">
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h1>Hi, Everyone! To See More Pictures of all Ninjas, Type this in your Browser: </h1>
+			<h2>localhost:5000/ninja</h2>
+			<img src="{{ url_for('static', filename = './images/tmnt.png') }}">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+.wrapper{
+	width: 900px;
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #3184b8;
+}
+
+h1{
+	text-align: center;
+	color: orange;
+}
+
+h2{
+	text-align: center;
+	color: orange;
+	text-decoration: underline;
+}
+
+img{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

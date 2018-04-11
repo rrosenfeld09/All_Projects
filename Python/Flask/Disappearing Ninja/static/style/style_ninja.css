@@ -1,0 +1,53 @@
+.wrapper{
+	width: 925px;
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #3184b8;
+
+}
+
+h1{
+	text-align: center;
+	color: orange;
+}
+
+h2{
+	text-align: center;
+	color: orange;
+	text-decoration: underline;
+}
+
+
+img{
+	width: 450px;
+	vertical-align: top;
+	margin: 5px;
+}
+
+.leo{
+	width: 450px;
+	height: 390px;
+	vertical-align: top;
+	margin: 5px;
+}
+
+.mike{
+	height: 554px;
+}
+
+.titles p {
+	display: inline-block;
+	color: orange;
+	font-size: 33px;
+	margin-left: 164px;
+}
+
+
+#second{
+	margin-left: 348px;
+}
+
+#fourth{
+	margin-left: 300px;
+
+}
