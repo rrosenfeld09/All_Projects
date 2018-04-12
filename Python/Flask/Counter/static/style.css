@@ -1,0 +1,24 @@
+.wrapper{
+	width: 700px;
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #64578a;
+	border-radius: 15px;
+}
+
+h1{
+	text-align: center;
+	color: white;
+}
+
+form{
+	text-align: center;
+}
+
+input{
+	width: 104px;
+	background-color: lightblue;
+	border-radius: 5px;
+	margin-bottom: 8px;
+	box-shadow: 2px 2px;
+}

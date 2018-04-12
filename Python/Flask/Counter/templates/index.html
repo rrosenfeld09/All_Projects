@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Counter</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h1>Page View Counter Using Session Data</h1>
+			<h1>{{ session['num_views']}} times.</h1>
+			<form action = "/plustwo" method = "POST">
+				<input type="submit" name="add2" value ="Add 2!">
+			</form>
+			<form action = "/reset" method="POST">
+				<input type="submit" name="reset" value = "RESET">
+			</form>
+		</div>
+	</body>
+</html>
