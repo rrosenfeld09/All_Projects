@@ -8,14 +8,19 @@ app.secret_key = "SuperSecret"
 
 @app.route("/")
 def index():
-	x = random.randrange(0,101)
-	session['random'] = x
+	try: 
+		session['random']
+	except NameError:
+		x = random.randrange(0,101)
+		session['random'] = x
 	print session['random']
 	return render_template("index.html")
 
 @app.route('/answer', methods = ["POST"])
 def answer():
 	session['answer'] = request.form['answer']
+	if session['answer'] == 5:
+		print "yep!"
 	print session['answer']
 	return redirect('/')
 
