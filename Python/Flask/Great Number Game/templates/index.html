@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html leng = "en">
 	<head>
-		<title></title>
+		<title>The Great Number Game</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
 	</head>
 	<body>
-		<form action = "/answer" method = "POST">
-			<input type="text" name="answer">
-			<input type="submit" name="submit" value = "take a guess!">
-		</form>
-		<h1>Your answer: {{session['answer']}}</h1>	
+		<div class = "wrapper">
+			<h1>The Great Number Game</h1>
+			<h3>featuring flask</h3>
+			<form action = "/answer" method = "POST">
+				<input type="text" name="answer">
+				<input class = "buttons" type="submit" name="submit" value = "Take a Guess!">
+			</form>
+			{% if session['gameover'] != True %}
+				<h1>Your answer: {{session['answer']}}</h1>	
+			{% endif %}
 
-		{%if session['answer'] < session['random'] %}
-			<p>too low</p>
-		{%else%}
-			<p>too high</p>
-		{% endif %}
-</body>
+			{%if session['gameover'] == True%}
+				<p  class = "play" >Please guess...</p>
+			{%elif session['answer'] < session['random'] %}
+				<div class="nope">
+					<p class = "pp">....too low</p>
+					<p>go higher....</p>
+				</div>
+			{%elif session['answer'] > session['random'] %}
+				<dir class="nope">
+					<p class = "pp">....too high</p>
+					<p>go lower....</p>
+				</dir>
+			{%else%}
+			 	<div>
+			 		<h1>NICE! Good Guess!</h1>
+					<form action = "/reset" method = "POST">
+						<input class = "buttons" type="submit" name="reset" value = "play again">
+					</form>
+				</div>
+			{% endif %}
+			<form action = "/reset" method = "POST">		
+				<input class = "buttons" type="submit" name="reset" value = "RESET">
+			</form>
+		</div>
 	</body>
 </html>

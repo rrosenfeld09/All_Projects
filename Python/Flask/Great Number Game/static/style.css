@@ -1,0 +1,58 @@
+.wrapper{
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	margin: 0px auto;
+	padding: 15px;
+	border-radius: 10px;
+	width: 766px;
+	height: 422px;
+}
+
+h1{
+	color: white;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+h3{
+	color: white;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.play{
+	text-align: center;
+}
+
+form{
+	text-align: center;
+}
+
+.nope{
+	width: 200px;
+	height: 150px;
+	background-color: orange;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	border-radius: 10px;
+	padding-left: 0px;
+}
+
+.pp{
+	padding-top: 25px;
+}
+
+input{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+.buttons{
+	box-shadow: 2px 2px;
+}
