@@ -3,6 +3,15 @@
 	<head>
 		<title>The Great Number Game</title>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$(".big_reset").click(function(){
+					alert("Game reset!")
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div class = "wrapper">
@@ -38,7 +47,7 @@
 				</div>
 			{% endif %}
 			<form action = "/reset" method = "POST">		
-				<input class = "buttons" type="submit" name="reset" value = "RESET">
+				<input class = "big_reset" type="submit" name="reset" value = "RESET">
 			</form>
 		</div>
 	</body>
