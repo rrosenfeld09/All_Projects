@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Ninja Gold</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h3>Your Gold: {{money}} </h3>
+			<div class = "all_boxes">
+				<div class = "make_money">
+					<h3>Farm</h3>
+					<h4>(earns 10-20 golds)</h4>
+					<form action = "/process_money" method="POST">
+						<input type="hidden" name="building" value = "farm">
+						<input class = "button" type="submit" value="Find Gold!">
+					</form>
+				</div>
+				<div class = "make_money">
+					<h3>Cave</h3>
+					<h4>(earns 5-10 golds)</h4>
+					<form action="/process_money" method="POST">
+						<input type="hidden" name="building" value = "cave">
+						<input class = "button" type="submit" value="Find Gold!">
+					</form>
+				</div>
+				<div class = "make_money">
+					<h3>House</h3>
+					<h4>(earns 2-5 golds)</h4>
+					<form action = "/process_money" method="POST">
+						<input type="hidden" name="building" value = "house">
+						<input class = "button" type="submit" value="Find Gold!">
+					</form>
+				</div>
+				<div class = "make_money">
+					<h3>Casino</h3>
+					<h4>(earns/takes 0-50 golds)</h4>
+					<form action = "/process_money" method="POST">
+						<input type="hidden" name="building" value = "casino">
+						<input class = "button" type="submit" value="Find Gold!">
+					</form>
+				</div>
+				<div class = activities>
+
+				</div>
+			</div>
+			<form action = "/clear" method = "POST">
+				<input type="submit" value = "Start Over!">
+			</form>
+		</div>
+	</body>
+</html>

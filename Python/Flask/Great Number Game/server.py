@@ -9,9 +9,9 @@ app.secret_key = "SuperSecret"
 def index():
 	try: 
 		if session['gameover'] == True:
-			session['random'] = random.randrange(0, 101)
+			session['random'] = random.randrange(1, 101)
 	except NameError:
-		x = random.randrange(0,101)
+		x = random.randrange(1,101)
 		session['random'] = x
 		session['gameover'] = True
 	print session['random']
@@ -26,7 +26,7 @@ def answer():
 
 @app.route("/reset", methods = ["POST"])
 def reset():
-	x = random.randrange(0,101)
+	x = random.randrange(1,101)
 	session['random'] = x
 	session['answer'] = -1
 	session['gameover'] = True

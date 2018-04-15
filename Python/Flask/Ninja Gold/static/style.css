@@ -1,0 +1,34 @@
+.wrapper{
+	width: 900px;
+	margin: 0px auto;
+	padding: 15px;
+	background: linear-gradient(to bottom right, #25292e, #404448);
+}
+.all_boxes{
+	text-align: center;
+}
+.make_money{
+	border: 2px solid black;
+	width: 180px;
+	display: inline-block;
+	color: #afd24b;
+	
+}
+
+h3{
+	text-align: center;
+	color: #afd24b;
+
+}
+
+h4{
+	text-align: center;
+	color: #afd24b;
+
+}
+
+.button{
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-bottom: 10px;
+}
