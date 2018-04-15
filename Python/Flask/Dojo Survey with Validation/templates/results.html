@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
 	<title>Results</title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles/style_results.css')}}">
@@ -10,8 +10,8 @@
 		<p>Name = <span>{{name}}</span></p>
 		<p>Email = <span>{{email}}</span></p>
 		<p>Favorite Language = <span>{{language}}</span></p>
+		<p class = "comment">Comment = <span>{{comment}}</span></p>
 		<form action="/"><input type="submit" value = "Go Back"></form>
 	</div>
-
 </body>
 </html>

@@ -6,16 +6,15 @@
 	border: 2px solid black;
 }
 
+span{
+	color: red;
+}
+
 h1{
 	text-decoration: underline;
 	text-align: center;
 }
 
-input{
-	display: block;
-	margin-bottom: 15px;
-}
-
-.bottom_button{
-	margin-top: 15px;
+.comment{
+	word-wrap: break-word;
 }

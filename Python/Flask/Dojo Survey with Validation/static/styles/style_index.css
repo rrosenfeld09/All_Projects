@@ -1,0 +1,57 @@
+.wrapper{
+	width: 500px;
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #ffeb8e;
+	border: 2px solid black;
+}
+
+.input{
+	display: inline-block;
+	width: 240px;
+}
+
+.error_box{
+	width: 400px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+}
+
+.error_box p{
+	text-align: center;
+	color: red;
+	font-weight: bold
+}
+
+
+h1{
+	text-decoration: underline;
+	text-align: center;
+}
+
+h3{
+	font-style: italic;
+	text-align: center;
+}
+
+input{
+	display: block;
+	margin-bottom: 15px;
+}
+
+.bottom_button{
+	margin-top: 15px;
+}
+
+.favlanguage{
+	margin-right: 350px;
+	margin-bottom: 12px;
+}
+
+img{
+	width: 180px;
+}
+
+

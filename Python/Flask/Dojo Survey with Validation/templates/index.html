@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles/style_index.css')}}">
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h1>Dojo Survey</h1>
+			<h3>WITH FORM VALIDATION</h3>
+			<div class = "error_box">
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						{% for message in messages %}
+							<p>{{message}}</p>
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
+			</div>
+			<div class = "input">
+				<form action = "/results" method = "POST">
+					Name:<input type="text" name="name">
+					Email:<input type="text" name="email">
+					Favorite Language:<select class = "favlanguage" name = "favlanguage">
+						<option value = "Python">Python</option>
+						<option value = "Java">Java</option>
+						<option value = "JavaScript">JavaScript</option>
+										</select>
+					Favorite Framework:<textarea name = "comment"></textarea>
+					<input class = "bottom_button" type="submit" name="submit">
+				</form>
+			</div>
+			<img src="{{ url_for('static', filename = './images/ninja.png' )}}" alt = "Picture of a Ninja">
+		</div>
+	</body>
