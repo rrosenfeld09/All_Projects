@@ -39,7 +39,7 @@ def process():
 		flash("your passwords don't match!")
 	else:
 		flash("success!")
-	print "registration successful"
+		print "registration successful"
 	return redirect("/")
 
 app.run(debug=True)
