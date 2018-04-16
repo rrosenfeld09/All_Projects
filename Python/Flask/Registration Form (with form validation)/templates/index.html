@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Registration Form</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h1>Registration Form</h1>
+			<h3>with form validation</h3>
+			<h5>password must contain at least 8 characters, 1 uppercase letter, and 1 number</h5>
+			<div class = "error_box">
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						{% for message in messages %}
+							<p>{{message}}</p>
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
+			</div>
+			<div class = "form">
+				<form action = "/process" method = "POST">
+					Email:<input type="text" name="email">
+					First Name:<input type="text" name="first_name">
+					Last Name:<input type="text" name="last_name">
+					Password:<input type="password" name="password">
+					Confirm Password:<input type="password" name="confirm_password">
+					<input class = "submit" type="submit" name="sumbit" value = "Register!">
+				</form>
+			</div>
+			<div class = "logo">
+				<h3>POWERED BY:</h3>
+				<img src="{{ url_for('static', filename = './images/flask.png') }}">
+			</div>
+		</div>
+		<div class = "source">
+			<a href="http://flask.pocoo.org/">Image Source</a>
+		</div>
+	</body>
+</html>
