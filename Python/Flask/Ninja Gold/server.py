@@ -7,6 +7,8 @@ app.secret_key = "SuperDuperSecret"
 
 @app.route("/")
 def index():
+	if session.get('money') == None:
+		session['money'] = 0
 	money = session['money']
 	return render_template("index.html", money = money)
 
