@@ -1,0 +1,25 @@
+.wrapper{
+    text-align: center;
+    width: 640px;
+    margin: 0px auto;
+    padding: 15px;
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+table{
+    margin-right: auto;
+    margin-left: auto;
+}
+h1{
+    color: red;
+}
+
+h2{
+    color: red;
+}
+.add{
+    margin-top: 10px;
+}
+form{
+    text-align: center;
+}

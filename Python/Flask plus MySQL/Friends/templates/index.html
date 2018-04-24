@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Full Friends</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <h1>Friends List</h1>
+            <table>
+                <tr>
+                    <th>ID | </th>
+                    <th>First Name | </th>
+                    <th>Last Name | </th>
+                    <th>Occupation | </th>
+                </tr>   
+                {% for friend in full_friends: %} 
+                <tr>
+                    <td>{{ friend['id'] }}</td>  
+                    <td>{{ friend['first_name'] }}</td>
+                    <td>{{ friend['last_name'] }}</td>
+                    <td>{{ friend['occupation'] }}</td>
+                </tr> 
+                {% endfor %}
+            </table>
+            <h2>Add a Friend</h2>
+            <form action='/full_friends' method='POST'>
+                <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+                <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+                <label for="occupation">Occupation:<input type="text" name="occupation" id="occupation"></label>
+                <input class = "add" type="submit" value="Add a Friend!">
+            </form>
+            <h2>Remove a Friend</h2>
+            <form action='/remove_friend' method='POST'>
+                <label for="id">ID:<input type="text" name="id"></label>
+                <p><input class = "remove" type="submit" value="Remove a Friend!"></p>
+            </form>
+        </div>
+    </body>
+</html>
