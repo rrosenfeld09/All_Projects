@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Email Success</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <p class = "success">The email addres you entered, {{email}}, is a VALID email address! Thank you!</p>
+            <h4>Email Addresses Entered:</h4>
+            <div class = "all_users">
+                {% if all_users: %}
+                    {%for user in all_users %}
+                        <p>{{ user['email']}}  --  {{ user['created_at']}} </p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

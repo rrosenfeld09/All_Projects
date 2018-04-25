@@ -1,0 +1,32 @@
+.wrapper{
+    width: 440px;
+    margin: 0px auto;
+    padding: 15px;
+    background-color: #4986e7;
+    color: white;
+    border-radius: 6px;
+
+}
+.flash_messages{
+    background-color: red;
+    width: 275px;
+    text-align: center;
+    margin-left: 18%;
+    margin-right: 18%;
+    border-radius: 5px;
+}
+
+form{
+    text-align: center;
+}
+
+h4{
+    text-decoration: underline;
+}
+
+.success{
+    width: 400px;
+    background-color: green;
+    text-align: center;
+    margin-left: 5%;
+}
