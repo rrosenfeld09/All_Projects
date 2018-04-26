@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sign Up or Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <h1>Welcome to My Registration and Login Page!</h1>
+            <div class = "reg_login"> 
+                <div class = "flash_messages">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p>{{message}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+                <h2>Sign Up</h2>
+                <form action="/register1" method = 'POST'>
+                    First Name: <input type="text" name="first_name">
+                    Last Name: <input type="text" name="last_name">
+                    Email: <input type="text" name="email">
+                    Password: <input type="password" name="password">
+                    Confirm Password: <input type="password" name="confirm_password">
+                    <input class = "button" type="submit" value = "ADD USER">
+                </form>
+                <h2>Already Have an Account? Login Here</h2>
+                <form action="/login" method="POST">
+                    Email: <input type="text" name ="email">
+                    Password: <input type="password" name="password">
+                    <input class = "button" type="submit" value = "LOGIN">
+                </form>
+            </div>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="picture of MySQL logo">  
+        </div>
+        <a href="https://en.wikipedia.org/wiki/MySQL">Logo Source</a>
+    </body>
+</html>
