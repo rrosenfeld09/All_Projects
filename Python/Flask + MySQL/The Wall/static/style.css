@@ -1,0 +1,128 @@
+.wrapper{
+    width:800px;
+    margin:0px auto;
+    padding: 15px;
+    background: linear-gradient(to bottom right, #f1f4f8, white);
+    border-radius: 5px;
+    padding-left: 50px;
+}
+
+.line{
+    width:750px;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
+.header p{
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.sign_out{
+    display: inline-block;
+}
+
+input{
+    display: block;
+}
+
+#sub_header{
+    margin-right: 355px;
+}
+
+.button{
+    background-color: purple;
+    color: white;
+    box-shadow: 2px 2px;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+
+input{
+    border-radius: 4px;
+}
+
+h1{
+    text-align: center;
+}
+
+.reg_login{
+    display: inline-block;
+}
+
+img{
+    vertical-align: top;
+    width: 330px;
+    padding-top: 60px;
+}
+
+a{
+    margin-left: 46%;
+}
+
+.flash_messages{
+    color: red;
+}
+
+textarea{
+    width: 650px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
+.post_message{
+    margin-left: 610px;
+    margin-top: 10px;
+    background-color: purple;
+    color: white;
+    box-shadow: 1px 1px gray;
+}
+.post_comment{
+    margin-left: 560px;
+    margin-top: 6px;
+    background-color: greenyellow;
+    box-shadow: 1px 1px gray;
+}
+/* .message_indent{
+    margin-left: 25px;
+} */
+
+.message_box{
+    width: 783px;
+}
+
+.comment_box{
+    width: 575px;
+    height: 20px;
+    display: block;
+
+}
+
+.comment{
+    margin-left: 102px;
+}
+
+.signout_button{
+    background-color: red;
+    color: white;
+}
+
+img{
+    padding-top: 105px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.bold2{
+    font-weight: bold;
+    margin-left: 102px;
+}
+
+p{
+    margin-top: 0px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Welcome</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <div class = "header">
+                <p id = "sub_header" >Powered by Flask and MySQL</p>
+                <p>Welcome, {{name}} </p>
+                <form class = "sign_out" action="/sign_out" method = "POST">
+                    <input type="hidden" name="hidden" id="hidden">
+                    <input class = "signout_button" type="submit" name ="sign_out" value = "sign out">
+                </form>           
+            </div>
+            <div class = "line"></div>
+            <h1>Welcome to The Wall</h1>
+            <form action="/add_message" method = "POST">
+                <textarea name="text_box" cols="30" rows="10" placeholder="What's on your mind?"></textarea>
+                <input class = "post_message" type="submit" name = "submit" value = "Post a Message!">
+            </form>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class = "message_box">
+                        <p class = "bold">{{message['name']}} - {{message['date']}}</p>
+                        <p class = "message_indent">{{message['message']}}</p>
+                        {% if comments %}
+                            {% for comment in comments %}
+                                {% if message['message_id'] == comment['message_id'] %}
+                                    <p class = "bold2">{{comment['name']}} - {{comment['date']}}</p>
+                                    <p class = "comment">{{comment['comment']}}</p>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        <form class = "add_comment" action="/add_comment/{{message.message_id}}" method = "POST">
+                            <textarea class = "comment_box" name="comment_box" cols="30" rows="10" placeholder="Leave a comment..."></textarea>
+                            <input class = "post_comment" type="submit" name = "submit" value="Post a Comment!">
+                        </form>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </body>
+</html>
