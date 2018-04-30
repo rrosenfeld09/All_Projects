@@ -1,0 +1,33 @@
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+h1{
+    text-align: center;
+    text-shadow: 1px 3px rgba(0,0,0,.1);
+
+}
+
+.wrapper{
+    width: 560px;
+    margin: 0px auto;
+    padding: 10px; 
+    background-color: #d8e1ee;
+    border-radius: 4px;
+    color: black;
+}
+table{
+    background-color: #d8e1ee;
+    margin-bottom: 10px;
+}
+
+form{
+    margin-bottom: 10px;
+}
+
+.button{
+    width: 80px;
+    background-color: peru;
+    color: white;
+    border-radius: 3px;
+}
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Home</title>
+        <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <h1>RESTful Routing</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+                </tr>
+                {% if all_friends %}
+                    {% for friend in all_friends %}
+                        <tr>
+                            <td>{{friend['id']}}</td>
+                            <td><a href="/users/{{friend['id']}}">{{friend['full_name']}}</a></td>
+                            <td>{{friend['email']}}</td>
+                            <td>{{friend['date_created']}}</td>
+                            <td><a href="/users/{{friend['id']}}">Show</a> - <a href="/users/{{friend['id']}}/edit">Edit</a> - <a href="/users/{{friend['id']}}/destroy">Delete</a></td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </table>
+            <a class = "center" href="/users/new">Add a new user</a>
+        </div>
+    </body>
+</html>
