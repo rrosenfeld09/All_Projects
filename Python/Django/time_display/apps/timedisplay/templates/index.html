@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Time and Date</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'timedisplay/style.css' %}">
+    </head>
+    <body>
+        <h2>The Current Time and Date (w/ Django):</h2>
+        <div>{{ time }}</div>
+    </body>
+</html>
