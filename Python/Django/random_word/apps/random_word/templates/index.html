@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Random Word</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'random_word/style.css' %}">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <h1>Welcome to the Random String Generator</h1>
+            <h2>powered by django</h2>
+            <h4>Random String (Generation #{{request.session.attempts}})</h4>
+            <div class = "random_word">{{random_word}}</div>
+            <form action="/generate" method = "POST">
+                {% csrf_token %}
+                <input class = "button" type="submit" name="submit" value = "Generate Word">
+            </form>
+            <form action="/clear/session" method = "POST">
+                {% csrf_token %}
+                <input class = "button" type="submit" name = "submit" value = "Start Over">
+            </form>
+        </div>
+    </body>
+</html>

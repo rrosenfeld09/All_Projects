@@ -17,11 +17,15 @@ def index(request):
     print "====", request.session['attempts'], "===="
     return render(request, "index.html", content)
 
-def clear(request):
-    print "im in clear"
-    del request.session['attempts']
-    print "CLEARED"
-    return redirect("")
+def clear_session(request):
+    if request.method == "POST":
+        print "im in clear"
+        del request.session['attempts']
+        print "CLEARED"
+    return redirect("/")
+
+def generate(request):
+    return redirect("/")
 
 
 
