@@ -1,0 +1,78 @@
+.wrapper{
+    width: 600px;
+    margin: 0px auto;
+    padding: 10px;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    display: inline-block;
+    text-align: left;
+}
+form input{
+    display: block;
+    margin-bottom: 8px;
+}
+form select{
+    display: block;
+    margin-bottom: 8px;
+}
+form textarea{
+    display: block;
+    margin-bottom: 8px;
+}
+
+img{
+    width: 300px;
+    vertical-align: top;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+a{
+    margin-left: 46%
+}
+
+.button{
+    background-color: blue;
+    color: white;
+    box-shadow: 1px 1px;
+}
+
+.success{
+    width: 400px;
+    background-color: green;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+.titles{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.info{
+    display: inline-block;
+}
+
+.go_back{
+    display: block;
+
+}
+
+.go_back input{
+    background-color: blue;
+    color: white;
+}

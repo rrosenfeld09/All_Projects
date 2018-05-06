@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Survey Form</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'surveys/style/style.css' %}">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <h1>Survey Form</h1>
+            <form action="/surveys/process" method = "POST">
+                {% csrf_token %}
+                Name: <input type="text" name = "name">
+                Dojo Location: <select name="location">
+                    <option value="Washington DC">Washington DC</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="Online">Online</option>
+                </select>
+                Favorite Language: <select name="language">
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="C#">C#</option>
+                    <option value="PHP">PHP</option>
+                </select>
+                Comment (optional): <textarea name="textarea" cols="30" rows="10" placeholder="write a comment"></textarea>
+                <input class = "button" type="submit" name="submit">
+            </form>
+            <img src="{% static 'surveys/images/logo.png' %}" alt="django logo">
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Django_(web_framework)">Image Source</a>
+    </body>
+</html>

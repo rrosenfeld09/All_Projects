@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Results</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'surveys/style/style.css' %}">
+    </head>
+    <body>
+        <div class = "success">
+            <h2>Thanks for submitting this form!</h2>
+            <h3>You've submitted this form {{request.session.submissions}} times!</h3>
+        </div>
+        <div class = "wrapper">
+            <h3>Submitted Information:</h3>
+            <div class = "titles">
+                <p>Name:</p>
+                <p>Dojo Location:</p>
+                <p>Favorite Language:</p>
+                <p>Comment: </p>
+            </div>
+            <div class = "info">
+                <p>{{name}}</p>
+                <p>{{location}}</p>
+                <p>{{language}}</p>
+                <p>{{comment}}</p>
+            </div>
+            <form class = "go_back" action="/go_back" method = "POST">
+                {% csrf_token %}
+                <input type="submit" value = "Go Back">
+            </form>
+            <form class = "go_back" action="/reset_session" method = "POST">
+                {% csrf_token %}
+                <input type="submit" value = "Clear Session Data and Go Back">
+            </form>
+        </div>
+    </body>
+</html>
