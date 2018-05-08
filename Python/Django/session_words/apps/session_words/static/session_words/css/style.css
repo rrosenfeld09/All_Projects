@@ -1,0 +1,42 @@
+.wrapper{
+    width: 600px;
+    margin: 0px auto;
+    padding: 10px;
+    background-color: cadetblue;
+    border-radius: 5px;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.green{
+    color: green;
+}
+
+.on{
+    font-weight: 100;
+    font-size: 30px;
+}
+.radio{
+    border: 2px solid black;
+    display: inline-block;
+}
+.font{
+    border: 2px solid black;
+    display: inline-block;
+}
+.word{
+    border: 2px solid black;
+    display: inline-block;
+}
+
+.add_new{
+    border: 2px solid black;
+    display: inline-block;
+    padding: 3px;
+}
