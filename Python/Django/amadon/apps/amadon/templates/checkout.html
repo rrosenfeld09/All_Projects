@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Checkout</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/amadon/skeleton.css' %}">
+    </head>
+    <body>
+        <h1>Checkout</h1>
+        <h2>Thank you for your business!</h2>
+        <h3>We charged your card for ${{request.session.total}}</h3>
+
+        <form action="/go_back" method = "POST">
+            {% csrf_token %}
+            <input type="submit" value = "go back">
+        </form>
+    </body>
+</html>

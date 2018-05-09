@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width='device-width', initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/amadon/skeleton.css' %}">
+       
+        <title>Amadon</title>
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Welcome to Amadon</h1>
+            <form action="/amadon/add_to_cart" method = "POST">
+                {% csrf_token %}
+                <input type="hidden" name = "product_id" value = "1015">
+                <select name = "quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                Item 1 ($19.99)<input type="submit" value = "add to cart!">
+            </form>
+            <form action="/amadon/add_to_cart" method = "POST">
+                {% csrf_token %}
+                <input type="hidden" name = "product_id" value = "1016">
+                <select name = "quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                Item 2 ($4.99)<input type="submit" value = "add to cart!">
+            </form>
+            <form action="/amadon/add_to_cart" method = "POST">
+                {% csrf_token %}
+                <input type="hidden" name = "product_id" value = "1017">
+                <select name = "quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                Item 3 ($52.99)<input type="submit" value = "add to cart!">
+            </form>
+            <form action="/amadon/add_to_cart" method = "POST">
+                {% csrf_token %}
+                <input type="hidden" name = "product_id" value = "1018">
+                <select name = "quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                Item 4 ($249.99)<input type="submit" value = "add to cart!">
+            </form>
+            <h4>Your Total is ${{request.session.total}}</h4>
+            <form action="/amadon/checkout" method = "POST">
+                {% csrf_token %}
+                <input type="submit" value = "CHECKOUT">
+            </form>
+            <form action="/clear" method = "POST">
+                {% csrf_token %}
+                <input type="submit" value = "empty cart">
+            </form>
+        </div>
+    </body>
+</html>
