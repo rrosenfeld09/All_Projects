@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Edit User</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/users/skeleton.css' %}">
+    </head>
+    <body>
+        <div class = "container">
+            <h1>edit user - {{user.first_name}} {{user.last_name}}</h1>
+            <form action="/users/{{user.id}}/update" method = "POST">
+                {% csrf_token %}
+                First Name: <input type="text" name = "first_name">
+                Last Name: <input type="text" name="last_name">
+                Email: <input type="text" name = "email">
+                <input type="submit" value = "Update">
+            </form>
+            <a href="/users">Go back</a>
+            <a href="/users/{{user.id}}">Show</a>
+        </div>
+    </body>
+</html>
