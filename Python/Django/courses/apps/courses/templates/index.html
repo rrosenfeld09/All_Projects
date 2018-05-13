@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Courses</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/courses/skeleton.css'%}">
+</head>
+<body>
+    <div class = "container">
+        <h1>Courses</h1>
+        <form action="/add_course" method = "POST">
+            {% csrf_token %}
+            Name: <input type="text" name = "name">
+            Description: <textarea name="desc" cols="30" rows="5" placeholder="max characters 100"></textarea>
+            <input type="submit" value = "Add">
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <p class = "error">{{message}}</p>    
+            {% endfor %}
+        {% endif %}
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Date Added</th>
+                <th>Actions</th>
+            </tr>
+            {% for course in courses %}
+            <tr>
+                <td>{{course.name}}</td>
+                <td>{{course.desc}}</td>
+                <td>{{course.created_at}}</td>
+                <td><a href="courses/destroy/{{course.id}}">remove</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

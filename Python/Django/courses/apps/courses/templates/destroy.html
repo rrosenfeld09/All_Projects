@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete Course</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/courses/skeleton.css'%}">
+</head>
+<body>
+    <div class = "container">
+        <h1>Are you sure you want to delete the following course?</h1>
+        <h3>Name: {{course.name}}</h3>
+        <h3>Description: {{course.desc}}</h3>
+        <form action="/">
+            <input type="submit" value = "No">
+        </form>
+        <form action="/delete/{{course.id}}">
+            <input type="submit" value = "Yes">
+        </form>
+    </div>
+</body>
+</html>
