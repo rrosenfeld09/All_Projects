@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ninja Gold</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/ninja_gold/skeleton.css' %}">
+    </head>
+    <body>
+        <div class = "container">
+            <h3>Your Gold: {{request.session.money}} </h3>
+			<div class = "all_boxes">
+				<div class = "make_money">
+					<h3>Farm</h3>
+					<h4>(+10-20 gold)</h4>
+                    <form action = "/process_money" method="POST">
+                        {% csrf_token %}
+						<input type="hidden" name="building" value = "farm">
+						<input class = "button" type="submit" value="Find Gold!">
+					</form>
+				</div>
+				<div class = "make_money">
+					<h3>Cave</h3>
+					<h4>(+5-10 gold)</h4>
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+						<input type="hidden" name="building" value = "cave">
+						<input class = "button" type="submit" value="Find Gold!">
+					</form>
+				</div>
+				<div class = "make_money">
+					<h3>House</h3>
+					<h4>(+2-5 gold)</h4>
+                    <form action = "/process_money" method="POST">
+                        {% csrf_token %}
+						<input type="hidden" name="building" value = "house">
+						<input class = "button" type="submit" value="Find Gold!">
+					</form>
+				</div>
+				<div class = "make_money">
+					<h3>Casino</h3>
+					<h4>(+/- 0-50 gold)</h4>
+                    <form action = "/process_money" method="POST">
+                        {% csrf_token %}
+						<input type="hidden" name="building" value = "casino">
+						<input class = "button" type="submit" value="Find Gold!">
+					</form>
+				</div>
+            </div>
+            <div class = "activities">
+                {% for i in request.session.activities %}
+                        <p class = "activity">{{i}}</p>
+                {% endfor %}
+            </div>
+            <form action = "/clear" method = "POST">
+                {% csrf_token %}
+                <input class = "reset" type="submit" value = "Start Over!">
+            </form>
+        </div>
+    </body>
+</html>
