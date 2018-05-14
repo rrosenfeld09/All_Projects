@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login and Registration</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'login_registration/skeleton.css' %}">
+    </head>
+    <body>
+        <div class = "container">
+            <h2>Registration</h2>
+            <div class = "errors">
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <form action="/register" method = "POST">
+                {% csrf_token %}
+                First Name: <input type="text" name = "first_name">
+                Last name: <input type="text" name = "last_name">
+                Email: <input type="text" name = "email">
+                Password: <input type="password" name = "password">
+                Confirm pw: <input type="password" name = "confirm_password">
+                <input type="submit" value = "register">
+            </form>
+            <h3>Already have an account? Sign in...</h3>
+            <form action="/login" method = "POST">
+                {% csrf_token %}
+                Email: <input type="email" name = "login_email">
+                Password: <input type="password" name = "login_password">
+                <input type="submit" value = "login">
+            </form>
+            <h5>powered by</h5>
+            <img class = "logo" src="{% static '/login_registration/logo.png' %}" alt="picture of Django logo">
+            <a class = "source" href="https://hirelofty.com/services/web-development/">Image source</a>
+        </div>
+    </body>
+</html>
