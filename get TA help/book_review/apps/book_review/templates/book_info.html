@@ -12,12 +12,16 @@
         <h1>{{book_info.title}}</h1>
         <p>Author: {{book_info.author}}</p>
         {% for review in reviews %}
+            <h4>Review</h4>
             <p>Rating: {{review.rating}}</p>
             <p>{{user.first_name}} says: {{review.review}}</p>
             <p>Posted on {{review.created_at}}</p>
+            {% if review.user_id == user.id %}
+                <a href="/review/delete/{{review.id}}">Delete Review</a>
+            {% endif %}
         {% endfor %}
         
-        <a href="/books">Home</a>
+       <p><a href="/books">Home</a></p> 
         <form action="/add_review" method = "POST">
             {% csrf_token %}
             Add a Review: <textarea name="review" cols="30" rows="10"></textarea>

@@ -25,6 +25,9 @@ urlpatterns = [
     url(r'^logout', include('apps.book_review.urls')),
     url(r'^books/add', include('apps.book_review.urls')),
     url(r'^book/add/process', include('apps.book_review.urls')),
+    url(r'^books/delete/', include('apps.book_review.urls')),
     url(r'books/', include('apps.book_review.urls')),
-    url(r'^add_review', include('apps.book_review.urls'))
+    url(r'^add_review', include('apps.book_review.urls')),
+    url(r'^review/delete/', include('apps.book_review.urls'))
+
 ]

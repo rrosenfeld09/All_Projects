@@ -31,6 +31,8 @@ def register(request):
         return redirect ('/books')
 
 def books(request):
+    if 'id' not in request.session:
+        return redirect('/')
     context = {
         'user_name': User.objects.get(id = request.session['id']),
         'books': Book.objects.order_by("-created_at")[:3],
@@ -94,3 +96,20 @@ def add_review(request):
     Review.objects.create( book = book, user = user, review = review, rating = rating )
     print "ADDED ADDITIONAL REVIEW"
     return redirect('/books/{}'.format(request.POST['book_id']))
+
+def delete_book(request, number):
+    a = Book.objects.get(id = number)
+    a.delete()
+    print "=" * 100
+    print "DELETED BOOK"
+    print "=" *100
+    return redirect('/books')
+
+def delete_review(request, number):
+    book = Review.objects.get(id = number).book_id
+    a = Review.objects.get(id = number)
+    a.delete()
+    print "=" * 100
+    print "DELETED REVIEW"
+    print "=" *100
+    return redirect('/books/{}'.format(book))

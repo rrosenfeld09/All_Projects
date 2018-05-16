@@ -17,11 +17,14 @@
             <div class = "top3">
                 {% if books %}
                     {% for book in books %}
-                        <h5><a href="">{{book.title}}</a></h5>
+                        <h5><a href="books/{{book.id}}">{{book.title}}</a></h5>
                             {% for review in book.reviews.all %}
                                 <p>Rating: {{review.rating}}</p>                            
-                                <p>Review: {{review.review}}</p>
+                                <p>{{review.user_id}} - Review: {{review.review}}</p>
                             {% endfor %}
+                        {% if book.user_id == user_name.id %}
+                            <p><a href="/books/delete/{{book.id}}">Delete Book</a></p>
+                        {% endif %}
                     {% endfor %}
                 {% endif %}
             </div>
@@ -29,7 +32,7 @@
             <div class = "all">
                 {% if all_books %}
                 {% for book in all_books %}
-                    <p>{{book.title}}</p>
+                    <p><a href="books/{{book.id}}">{{book.title}}</a></p>
                     {% endfor %}
                 {% endif %}
             </div>
