@@ -20,7 +20,8 @@
                         <h5><a href="books/{{book.id}}">{{book.title}}</a></h5>
                             {% for review in book.reviews.all %}
                                 <p>Rating: {{review.rating}}</p>                            
-                                <p>{{review.user_id}} - Review: {{review.review}}</p>
+                                <p><a href="/users/{{review.user.id}}">{{review.user.first_name}}</a> says:  {{review.review}}</p>
+                                <p>Posted on: {{review.created_at}}</p>
                             {% endfor %}
                         {% if book.user_id == user_name.id %}
                             <p><a href="/books/delete/{{book.id}}">Delete Book</a></p>

@@ -14,7 +14,7 @@
         {% for review in reviews %}
             <h4>Review</h4>
             <p>Rating: {{review.rating}}</p>
-            <p>{{user.first_name}} says: {{review.review}}</p>
+            <p><a href="/users/{{review.user.id}}">{{review.user.first_name}}</a> says:  {{review.review}}</p>            
             <p>Posted on {{review.created_at}}</p>
             {% if review.user_id == user.id %}
                 <a href="/review/delete/{{review.id}}">Delete Review</a>

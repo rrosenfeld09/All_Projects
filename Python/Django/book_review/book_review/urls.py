@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^books/delete/', include('apps.book_review.urls')),
     url(r'books/', include('apps.book_review.urls')),
     url(r'^add_review', include('apps.book_review.urls')),
-    url(r'^review/delete/', include('apps.book_review.urls'))
+    url(r'^review/delete/', include('apps.book_review.urls')),
+    url(r'^users/', include('apps.book_review.urls'))
 
 ]

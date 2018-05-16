@@ -36,7 +36,8 @@ def books(request):
     context = {
         'user_name': User.objects.get(id = request.session['id']),
         'books': Book.objects.order_by("-created_at")[:3],
-        'all_books': Book.objects.order_by("-created_at")
+        'all_books': Book.objects.order_by("-created_at"),
+        
         }
     return render(request, 'books.html', context)
 
@@ -113,3 +114,11 @@ def delete_review(request, number):
     print "DELETED REVIEW"
     print "=" *100
     return redirect('/books/{}'.format(book))
+
+def users(request, number):
+    context = {
+        'user': User.objects.get(id = number),
+        'review_count': Review.objects.filter(user_id = number).count(),
+        'all_reviews': Review.objects.filter(user_id = number)
+    }
+    return render(request, 'users.html', context)

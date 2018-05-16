@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^books/(?P<number>\d+)$', views.book_info),
     url(r'add_review$', views.add_review),
     url(r'^books/delete/(?P<number>\d+)$', views.delete_book),
-    url(r'^review/delete/(?P<number>\d+)$', views.delete_review)
+    url(r'^review/delete/(?P<number>\d+)$', views.delete_review),
+    url(r'^users/(?P<number>\d+)$', views.users)
 ]
