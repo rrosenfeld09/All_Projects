@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Book Info</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/book_review/skeleton.css' %}">
+    </head>
+    <body>
+        <h1>{{book_info.title}}</h1>
+        <p>Author: {{book_info.author}}</p>
+        {% for review in reviews %}
+            <p>Rating: {{review.rating}}</p>
+            <p>{{user.first_name}} says: {{review.review}}</p>
+            <p>Posted on {{review.created_at}}</p>
+        {% endfor %}
+        
+        <a href="/books">Home</a>
+        <form action="/add_review" method = "POST">
+            {% csrf_token %}
+            Add a Review: <textarea name="review" cols="30" rows="10"></textarea>
+            Rating: <select name="rating">
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                <input type="submit" value = "Submit review">
+                <input type="hidden" name = "book_id" value = {{book_info.id}}>
+        </form>
+    </body>
+</html>

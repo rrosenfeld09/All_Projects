@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Books</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/book_review/skeleton.css' %}">
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Welcome, {{user_name.first_name}}</h1>
+            <p> <a href="/books/add">Add Book and Review</a></p>
+            <p>  <a href="/logout">Logout</a></p>
+            <h3>Recent book reviews:</h3>
+            <div class = "top3">
+                {% if books %}
+                    {% for book in books %}
+                        <h5><a href="">{{book.title}}</a></h5>
+                            {% for review in book.reviews.all %}
+                                <p>Rating: {{review.rating}}</p>                            
+                                <p>Review: {{review.review}}</p>
+                            {% endfor %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <h3>All book reviews:</h3>
+            <div class = "all">
+                {% if all_books %}
+                {% for book in all_books %}
+                    <p>{{book.title}}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

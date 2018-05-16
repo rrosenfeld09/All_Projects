@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Homepage</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/book_review/skeleton.css' %}">
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Register</h1>
+            {% if messages %}
+                {% for message in messages %}
+                    <p class = "messages">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+            <form action="/register" method = "POST">
+                {% csrf_token %}
+                First Name: <input type="text" name = "first_name">
+                Last Name: <input type="text" name="last_name">
+                Email: <input type="text" name = "email">
+                Password: <input type="password" name = "password">
+                Confirm pw: <input type="password" name = "confirm_password">
+                <input type="submit" value = "register">
+            </form>
+            <h1>Login</h1>
+            <form action="/login" method = "POST">
+                {% csrf_token %}
+                Email: <input type="text" name = "login_email">
+                Password: <input type="password" name="login_password">
+                <input type="submit" value = "Login">
+            </form>
+        </div>
+    </body>
+</html>

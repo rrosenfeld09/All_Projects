@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Book and Review</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/book_review/skeleton.css' %}">
+</head>
+<body>
+    <div class = "container">
+        <h1>Add Book and Review</h1>
+        <a href="/books">Home</a>
+        <a href="/logout">Logout</a>
+        <form action="/book/add/process" method = "POST">
+            {% csrf_token %}
+            Title: <input type="text" name = "title">
+            Author: <input type="text" name = "author">
+            Review: <textarea name="review"cols="30" rows="10"></textarea>
+            Rating: <select name="rating">
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                    <input type="submit" value = "Add Book and Review">
+        </form>
+    </div>
+</body>
+</html>
