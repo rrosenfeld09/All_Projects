@@ -9,29 +9,34 @@
         <link rel="stylesheet" href="{% static '/user_dashboard/templated-projection/assets/css/main.css' %}">
     </head>
     <body>
-        <h1>edit info for {{user.first_name}}</h1>
-        <fieldset>
-            <legend>Edit Information</legend>
-            <form action="/admin/edit/{{user.id}}" method = "POST">
-                {% csrf_token %}
-                Email: <input type="text" name = "email">
-                First Name: <input type="text" name = "first_name">
-                Last Name: <input type="text" name = "last_name">
-                User Level: <select name="user_level">
-                                <option value="admin">Admin</option>
-                                <option value="normal">Normal</option>
-                            </select>
+        <div class = "container">
+            <h2>edit info for {{user.first_name}}</h2>
+            <hr>
+            <fieldset>
+                <legend>Edit Information</legend>
+                <form action="/admin/edit/{{user.id}}" method = "POST">
+                    {% csrf_token %}
+                    Email: <input type="text" name = "email">
+                    First Name: <input type="text" name = "first_name">
+                    Last Name: <input type="text" name = "last_name">
+                    User Level: <select name="user_level">
+                                    <option value="admin">Admin</option>
+                                    <option value="normal">Normal</option>
+                                </select>
+                        <input type="submit" value = "save">
+                </form>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend>Update Password</legend>
+                <form action="/admin/password_update/{{user.id}}" method = "POST">
+                    {% csrf_token %}
+                    Password: <input type="password" name = "password">
+                    Confirm PW: <input type="password" name = "confirm_password">
                     <input type="submit" value = "save">
-            </form>
-        </fieldset>
-        <fieldset>
-            <legend>Update Password</legend>
-            <form action="/admin/password_update/{{user.id}}" method = "POST">
-                {% csrf_token %}
-                Password: <input type="password" name = "password">
-                Confirm PW: <input type="password" name = "confirm_password">
-                <input type="submit" value = "save">
-            </form>
-        </fieldset>
+                </form>
+            </fieldset>
+            <a href="/dashboard/admin">Go back to dashboard</a>
+        </div>
     </body>
 </html>

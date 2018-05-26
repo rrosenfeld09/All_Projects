@@ -10,26 +10,52 @@
     </head>
     <body>
         <div class = "containter">
-            <h1>user page for {{user.first_name}} {{user.last_name}}</h1>
+            <h2>User Page for {{user.first_name}} {{user.last_name}}</h2>
             <p>Registered on: {{user.created_at}}</p>
             <p>User ID: {{user.id}}</p>
             <p>Email Address: {{user.email}}</p>
             <p>Description: {{user.desc}}</p>
+            <hr>
             <h3>Leave a Message for {{user.first_name}}:</h3>
-            <form action="/add_message/{{user.id}}" method = "POST">
-                {% csrf_token %}
-                <textarea name="textarea"cols="30" rows="10"></textarea>
-                <input type="submit" value = "leave message">
-            </form>
             {% if messages %}
                 {% for message in messages %}
-                    <fieldset>{{message.message}}</fieldset>
-                    {% if message.written_by == logged_user.id %}
-                        <a href="">Delete</a>
-                    {% endif %}
+                    <p>{{message}}</p>
                 {% endfor %}
             {% endif %}
-            <a href="/dashboard/admin">Go back to Dashboard</a>
+            <form action="/add_message/{{user.id}}" method = "POST">
+                {% csrf_token %}
+                <textarea name="textarea" placeholder = "message..."cols="30" rows="10"></textarea>
+                <input type="submit" value = "leave message">
+            </form>
+            <hr>
+
+            {% if all_messages %}
+                {% for message in all_messages %}
+                    <h4 id = "message">{{message.message}}</h4>
+                    - posted on {{message.created_at}}
+                    {% if message.written_by == request.session.id %}
+                         <p><a href="/message/remove/{{message.id}}">delete message</a></p> 
+                    {% endif %}
+                    {% if comments %}
+                        {% for comment in comments %}
+                            {% if comment.message_id == message.id %}
+                                <p id = "comments">{{comment.comment}}</p>
+                                {% if comment.user_id == request.session.id %}
+                                    <a href="/comment/remove/{{comment.id}}">delete comment</a>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    <form action="/comment/{{message.id}}" method = "POST">
+                        {% csrf_token %}
+                        <input type="hidden" name = "profile" value = "{{user.id}}">
+                        <textarea id = "comment" name="comment" placeholder = "comment..." cols="15" rows="5"></textarea>
+                        <input type="submit" value = "leave comment">
+                    </form>
+                    <hr>
+                {% endfor %}
+            {% endif %}
+            <a href="/dashboard/admin">Go back to Dashboard</a> |
             <a href="/logout">Sign Out</a>
         </div>
     </body>

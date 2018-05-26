@@ -9,31 +9,34 @@
         <link rel="stylesheet" href="{% static '/user_dashboard/templated-projection/assets/css/main.css' %}">
     </head>
     <body>
-        <h1>Dashboard</h1>
-        <table>
-                <tr>
-                    <th>id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Created at</th>
-                    <th>User Level</th>
-                </tr>
-                {% if users %}
-                    {% for user in users %}
-                        <tr>
-                            <td>{{user.id}}</td>
-                            <td><a href="/users/show/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></td>
-                            <td>{{user.email}}</td>
-                            <td>{{user.created_at}}</td>
-                            {% if user.admin == 1 %}
-                                <td>Admin</td>
-                            {% else %}
-                                <td>Normal</td>
-                            {% endif %}
-                        </tr>
-                    {% endfor %}
-                {% endif %}
+        <div class = "container">
+            <h2>{{this_user.first_name}}'s Dashboard</h2>
+            <table>
+                    <tr>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Created at</th>
+                        <th>User Level</th>
+                    </tr>
+                    {% if users %}
+                        {% for user in users %}
+                            <tr>
+                                <td>{{user.id}}</td>
+                                <td><a href="/users/show/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></td>
+                                <td>{{user.email}}</td>
+                                <td>{{user.created_at}}</td>
+                                {% if user.admin == 1 %}
+                                    <td>Admin</td>
+                                {% else %}
+                                    <td>Normal</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
             </table>
-        <a href="/logout">Sign Out</a>
+            <a href="/users/edit_self/{{request.session.id}}">Edit Profile</a> |
+            <a href="/logout">Sign Out</a>
+        </div>
     </body>
 </html>

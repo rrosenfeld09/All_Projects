@@ -17,6 +17,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
+		padding-bottom: 0px;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -62,6 +63,7 @@
 	.container {
 		margin-left: auto;
 		margin-right: auto;
+		margin: 15px;
 	}
 
 	.container.\31 25\25 {
@@ -1590,6 +1592,14 @@
 		font-size: 14pt;
 		font-weight: 400;
 		line-height: 1.65;
+		width: 800px;
+		height: 150px;
+		margin-bottom: 10px;
+	}
+
+	#comment{
+		width: 400px;
+		height: 50px;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -2542,6 +2552,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		width: 200px;
 	}
 
 		input[type="submit"]:hover,
@@ -3157,3 +3168,10 @@
 			}
 
 		}
+#messages{
+	margin:0px;
+}
+
+#comments{
+	margin:0px;
+}

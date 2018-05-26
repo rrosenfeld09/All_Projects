@@ -17,5 +17,13 @@ urlpatterns = [
     url(r'^users/edit/(?P<number>\d+)$', views.edit),
     url(r'^admin/edit/(?P<number>\d+)$', views.admin_edit),
     url(r'^admin/password_update/(?P<number>\d+)$', views.admin_password),
-    url(r'^add_message/(?P<number>\d+)$', views.add_message)
+    url(r'^add_message/(?P<number>\d+)$', views.add_message),
+    url(r'^comment/(?P<number>\d+)$', views.add_comment),
+    url(r'^message/remove/(?P<number>\d+)$', views.remove_message),
+    url(r'^comment/remove/(?P<number>\d+)$', views.remove_comment),
+    url(r'^users/edit_self/(?P<number>\d+)$', views.user_edit),
+    url(r'^self_edit/info/(?P<number>\d+)$',views.self_edit_info),
+    url(r'^self_edit/pw/(?P<number>\d+)$',views.self_edit_pw),
+    url(r'^self_edit/desc/(?P<number>\d+)$',views.self_edit_desc)
+
 ]

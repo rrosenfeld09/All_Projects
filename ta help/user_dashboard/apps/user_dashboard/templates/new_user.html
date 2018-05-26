@@ -9,21 +9,23 @@
     <link rel="stylesheet" href="{% static '/user_dashboard/templated-projection/assets/css/main.css' %}">
 </head>
 <body>
-    <h1>Add a new user</h1>
-    {% if messages %}
-        {% for message in messages %}
-            <p>{{message}}</p>
-        {% endfor %}
-    {% endif %}
-    <form action="/admin_add_user" method = "POST">
-        {% csrf_token %}
-        Email: <input type="text" name = "email">
-        First Name: <input type="text" name = "first_name">
-        Last Name: <input type="text" name="last_name">
-        Password: <input type="password" name = "password">
-        Confirm pw: <input type="password" name="confirm_password">
-        <input type="submit" value = "create">
-    </form>
-    <a href="/dashboard/admin">return to admin dashboard</a>
+    <div class = "container">
+        <h1>Add a new user</h1>
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        <form action="/admin_add_user" method = "POST">
+            {% csrf_token %}
+            Email: <input type="text" name = "email">
+            First Name: <input type="text" name = "first_name">
+            Last Name: <input type="text" name="last_name">
+            Password: <input type="password" name = "password">
+            Confirm pw: <input type="password" name="confirm_password">
+            <input type="submit" value = "create">
+        </form>
+        <a href="/dashboard/admin">return to admin dashboard</a>
+    </div>
 </body>
 </html>
