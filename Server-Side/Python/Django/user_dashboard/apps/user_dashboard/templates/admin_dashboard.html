@@ -33,7 +33,7 @@
                             {% else %}
                                 <td>Normal</td>
                             {% endif %}
-                            <td><a href="/users/edit/{{user.id}}">edit</a> | <a href="/delete/{{user.id}}">remove</a></td>
+                            <td><a href="/users/edit/{{user.id}}">edit</a> | <a href="/delete/{{user.id}}" onclick="return confirm('are you sure you want to delete this?')">remove</a></td>
                         </tr>
                     {% endfor %}
                 {% endif %}

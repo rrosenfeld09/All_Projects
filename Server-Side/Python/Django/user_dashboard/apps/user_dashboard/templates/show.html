@@ -32,19 +32,22 @@
             {% if all_messages %}
                 {% for message in all_messages %}
                     <h4 id = "message">{{message.message}}</h4>
-                    - posted on {{message.created_at}}
-                    {% if message.written_by == request.session.id %}
-                         <p><a href="/message/remove/{{message.id}}">delete message</a></p> 
+                    - posted by {{message.written_by.first_name}} on {{message.created_at}}
+                    {% if message.written_by.id == request.session.id %}
+                        <a href="/message/remove/{{message.id}}">delete message</a>
                     {% endif %}
                     {% if comments %}
+                    <fieldset id = "fieldset">
                         {% for comment in comments %}
                             {% if comment.message_id == message.id %}
                                 <p id = "comments">{{comment.comment}}</p>
+                                <p id = "info">-posted by {{comment.user.first_name}} on {{comment.created_at}}</p> 
                                 {% if comment.user_id == request.session.id %}
-                                    <a href="/comment/remove/{{comment.id}}">delete comment</a>
+                                     <a href="/comment/remove/{{comment.id}}">delete comment</a>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
+                    </fieldset>
                     {% endif %}
                     <form action="/comment/{{message.id}}" method = "POST">
                         {% csrf_token %}

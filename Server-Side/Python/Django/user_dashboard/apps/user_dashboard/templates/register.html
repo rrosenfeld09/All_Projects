@@ -10,7 +10,11 @@
     </head>
     <body>
         <div class = "container">
-            <h1>Registration Page</h1>
+            <h2>Registration Page</h2>
+            <form action="/">
+                {% csrf_token %}
+                <input type="submit" value = "Home">
+            </form>
             {% if messages %}
                 {% for message in messages %}
                     <p>{{message}}</p>

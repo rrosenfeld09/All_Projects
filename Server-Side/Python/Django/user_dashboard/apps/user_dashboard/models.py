@@ -37,7 +37,7 @@ class UserManager(models.Manager):
         if request.POST['password'] != request.POST['confirm_password']:
             errors['confirm_password'] = "your passwords don't match!"
         if len(email_check) > 0:
-            errors['email_check'] = "that email is already registered, please sign in"
+            errors['email_check'] = "that email is already registered"
         return errors
     def info_update_validator(self, request):
         errors = {}
@@ -90,7 +90,7 @@ class User(models.Model):
 class Message(models.Model):
     message = models.TextField()
     user = models.ForeignKey(User, related_name = "messages")
-    written_by = models.IntegerField()
+    written_by = models.ForeignKey(User, related_name="who_wrote_messages")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = MessageManager()

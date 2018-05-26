@@ -101,7 +101,7 @@ def admin_add(request):
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
         email = request.POST['email']
-        password = request.POST['password']
+        password = bcrypt.hashpw(request.POST['password'].encode(), bcrypt.gensalt())        
         admin = False
         User.objects.create(first_name = first_name, last_name = last_name, email = email, admin = admin, password = password)
     return redirect('/dashboard/admin')
@@ -177,7 +177,7 @@ def add_message(request, number):
         print "DID NOT ADD MESSAGE"
         return redirect('/users/show/{}'.format(number))
     else:   
-        written_by = User.objects.get(id = request.session['id']).id
+        written_by = User.objects.get(id = request.session['id'])
         user = User.objects.get(id = number)
         message = request.POST['textarea']
         Message.objects.create(message = message, user = user, written_by = written_by)
@@ -203,7 +203,7 @@ def add_comment(request, number):
 
 def remove_message(request, number):
     this_user = User.objects.get(id = request.session['id']).id
-    this_message = Message.objects.get(id = number).written_by
+    this_message = Message.objects.get(id = number).written_by.id
     this_profile = Message.objects.get(id = number).user_id
     if this_user == this_message:
         a = Message.objects.get(id = number)
@@ -225,7 +225,12 @@ def remove_comment(request, number):
         return redirect('/')
     
 def user_edit(request, number):
-    return render(request, 'user_edit.html')
+    edit_profile = User.objects.get(id = number)
+    logged_user = User.objects.get(id = request.session['id'])
+    if edit_profile == logged_user:
+        return render(request, 'user_edit.html')
+    else: 
+        return redirect('/dashboard')
 
 def self_edit_info(request, number):
     errors = User.objects.info_update_validator(request)

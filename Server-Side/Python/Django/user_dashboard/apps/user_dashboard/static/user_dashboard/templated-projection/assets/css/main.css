@@ -64,6 +64,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin: 15px;
+		padding: 15px;
 	}
 
 	.container.\31 25\25 {
@@ -3174,4 +3175,18 @@
 
 #comments{
 	margin:0px;
+}
+
+
+
+#fieldset{
+	border: 2px solid grey;
+	width: 393px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#info{
+	color: lightgreen;
+	margin-bottom: 2px;
 }
