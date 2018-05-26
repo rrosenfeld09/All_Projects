@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Register</title>
+        {% load static %} 
+        <link rel="stylesheet" href="{% static '/user_dashboard/templated-projection/assets/css/main.css' %}">
+    </head>
+    <body>
+        <h1>Registration Page</h1>
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        <form action="/register_process" method = "POST">
+            {% csrf_token %}
+            Email: <input type="text" name = "email">
+            First Name: <input type="text" name = "first_name">
+            Last Name: <input type="text" name = "last_name">
+           Password: <input type="password" name = "password">
+            Confirm PW:<input type="password" name = "confirm_password">
+            <input type="submit">
+        </form>
+        <a href="/login">Already have an account? Login here</a>
+    </body>
+</html>

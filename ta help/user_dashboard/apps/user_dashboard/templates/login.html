@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static '/user_dashboard/templated-projection/assets/css/main.css' %}">
+</head>
+<body>
+    <div class = "container">
+        <div class = "home_header">
+            <h4>Test App</h4>
+            <form action="/">
+                {% csrf_token %}
+                <input type="submit" value = "Home">
+            </form>
+            <form action="/login">
+                {% csrf_token %}
+                <input type="submit" value = "Sign in">
+            </form>
+            <hr>
+        </div>
+        <h3>Sign in</h3>
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        <form action="/login_process" method = "POST">
+            {% csrf_token %}
+            Email Address: <input type="text" name = "login_email">
+            Password: <input type="password" name = "login_password">
+            <input type="submit" value = "Sign in">
+        </form>
+        <a href="/register">Don't have an account? Register</a>
+    </div>
+</body>
+</html>

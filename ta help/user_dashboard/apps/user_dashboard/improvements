@@ -1,0 +1,7 @@
+-add extra form validations for login and registration
+- add validations for admin ability to create new user
+-style everything
+-hash passwords
+
+WHERE TO ACCOMPLISH TODAY:
+1) normal dashboard

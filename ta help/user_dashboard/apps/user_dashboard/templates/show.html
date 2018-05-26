@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>User Page</title>
+        {% load static %} 
+        <link rel="stylesheet" href="{% static '/user_dashboard/templated-projection/assets/css/main.css' %}">
+    </head>
+    <body>
+        <div class = "containter">
+            <h1>user page for {{user.first_name}} {{user.last_name}}</h1>
+            <p>Registered on: {{user.created_at}}</p>
+            <p>User ID: {{user.id}}</p>
+            <p>Email Address: {{user.email}}</p>
+            <p>Description: {{user.desc}}</p>
+            <h3>Leave a Message for {{user.first_name}}:</h3>
+            <form action="/add_message/{{user.id}}" method = "POST">
+                {% csrf_token %}
+                <textarea name="textarea"cols="30" rows="10"></textarea>
+                <input type="submit" value = "leave message">
+            </form>
+            {% if messages %}
+                {% for message in messages %}
+                    <fieldset>{{message.message}}</fieldset>
+                    {% if message.written_by == logged_user.id %}
+                        <a href="">Delete</a>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <a href="/dashboard/admin">Go back to Dashboard</a>
+            <a href="/logout">Sign Out</a>
+        </div>
+    </body>
+</html>
