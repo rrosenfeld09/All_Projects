@@ -12,6 +12,8 @@ namespace Phones
 
             s8.DisplayInfo();
             elevenHundred.DisplayInfo();
+            s8.Ring();
+            elevenHundred.Unlock();
 
         }
     }

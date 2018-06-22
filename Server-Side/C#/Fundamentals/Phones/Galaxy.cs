@@ -20,7 +20,7 @@ namespace Phones
         }
         public override void DisplayInfo() 
         {
-            Console.WriteLine("Your phone version is {0} and the service is provided by {1}. Your battery percentage is {2} and your ringtone is {3}", this.versionNumber, this.carrier, batteryPercentage, ringTone);      
+            Console.WriteLine("Your phone version is {0} and the service is provided by {1}. Your battery percentage is {2} and your ringtone is {3}", _versionNumber, _carrier, _batteryPercentage, _ringTone);      
         }
     }    
 }
