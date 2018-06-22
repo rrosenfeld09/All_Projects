@@ -1,0 +1,11 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/bin/Debug/netcoreapp2.0/Phones.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/bin/Debug/netcoreapp2.0/Phones.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/bin/Debug/netcoreapp2.0/Phones.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/bin/Debug/netcoreapp2.0/Phones.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/bin/Debug/netcoreapp2.0/Phones.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/obj/Debug/netcoreapp2.0/Phones.csprojResolveAssemblyReference.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/obj/Debug/netcoreapp2.0/Phones.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/obj/Debug/netcoreapp2.0/Phones.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/obj/Debug/netcoreapp2.0/Phones.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/obj/Debug/netcoreapp2.0/Phones.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Phones/obj/Debug/netcoreapp2.0/Phones.pdb
