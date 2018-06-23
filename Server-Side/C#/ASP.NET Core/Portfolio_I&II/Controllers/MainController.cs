@@ -5,23 +5,23 @@ namespace PortfolioI
     {
         [HttpGet]
         [Route("")]
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my Index!";
+            return View("Main");
         }
 
         [HttpGet]
-        [Route("{item}")]
-        public string Thing(string item)
+        [Route("projects")]
+        public IActionResult Projects()
         {
-            return "These are my " + item;
+            return View("Project");
         }
 
         [HttpGet]
         [Route("contact")]
-        public string Contact()
+        public IActionResult Contact()
         {
-            return "These are my contacts!";
+            return View("Contact");
         }
     }
 }

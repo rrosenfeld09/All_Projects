@@ -1,0 +1,19 @@
+.container{
+    width: 600px;
+    border: 0px auto;
+    padding: 15px;
+}
+
+.menu{
+    text-align: center;
+}
+
+img{
+    width: 300px;
+    margin-left: 23%;
+}
+
+.scroll{
+    height: 100px;
+    overflow-y: scroll;
+}
