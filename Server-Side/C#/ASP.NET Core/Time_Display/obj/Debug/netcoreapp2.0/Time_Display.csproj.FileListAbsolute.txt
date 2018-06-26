@@ -1,0 +1,11 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.csprojResolveAssemblyReference.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.pdb
