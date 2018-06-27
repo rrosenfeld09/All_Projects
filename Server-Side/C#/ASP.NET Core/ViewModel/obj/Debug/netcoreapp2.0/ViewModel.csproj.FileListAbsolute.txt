@@ -1,0 +1,11 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/bin/Debug/netcoreapp2.0/ViewModel.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/bin/Debug/netcoreapp2.0/ViewModel.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/bin/Debug/netcoreapp2.0/ViewModel.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/bin/Debug/netcoreapp2.0/ViewModel.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/bin/Debug/netcoreapp2.0/ViewModel.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/obj/Debug/netcoreapp2.0/ViewModel.csprojResolveAssemblyReference.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/obj/Debug/netcoreapp2.0/ViewModel.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/obj/Debug/netcoreapp2.0/ViewModel.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/obj/Debug/netcoreapp2.0/ViewModel.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/obj/Debug/netcoreapp2.0/ViewModel.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/ViewModel/obj/Debug/netcoreapp2.0/ViewModel.pdb
