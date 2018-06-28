@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Results</title>
+    </head>
+    <body>
+        <div class = "container">
+            <fieldset>
+                @using Dojo_Survey.Models
+                @model User
+                <legend>Submitted Info</legend>
+                <p>Name: @Model.name</p> 
+                <p>Favorite City: @Model.location</p> 
+                <p>Favorite Language: @Model.language</p> 
+                <p>Comment: @Model.comment</p> 
+            </fieldset>
+        </div>
+    </body>
+</html>

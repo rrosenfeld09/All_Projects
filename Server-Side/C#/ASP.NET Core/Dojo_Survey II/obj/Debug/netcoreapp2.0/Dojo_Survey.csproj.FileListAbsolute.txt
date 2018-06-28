@@ -1,0 +1,11 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/bin/Debug/netcoreapp2.0/Dojo_Survey.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/bin/Debug/netcoreapp2.0/Dojo_Survey.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/bin/Debug/netcoreapp2.0/Dojo_Survey.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/bin/Debug/netcoreapp2.0/Dojo_Survey.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/bin/Debug/netcoreapp2.0/Dojo_Survey.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/obj/Debug/netcoreapp2.0/Dojo_Survey.csprojResolveAssemblyReference.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/obj/Debug/netcoreapp2.0/Dojo_Survey.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/obj/Debug/netcoreapp2.0/Dojo_Survey.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/obj/Debug/netcoreapp2.0/Dojo_Survey.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/obj/Debug/netcoreapp2.0/Dojo_Survey.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ASP.NET Core/Projects/Dojo_Survey/obj/Debug/netcoreapp2.0/Dojo_Survey.pdb

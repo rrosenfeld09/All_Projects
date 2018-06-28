@@ -1,0 +1,22 @@
+.container{
+    width: 500px;
+    background-color: aliceblue;
+    text-align: left;
+
+}
+
+input{
+    display: block;
+    font-size:11px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:70px;
+    margin:2px 0 20px 10px;}
+
+select{
+    display: block;
+    font-size:11px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:70px;
+    margin:2px 0 20px 10px;}
