@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Social Climbers</title>
+        {% load static %} 
+        <link rel="stylesheet" href="{% static '/user_dashboard/templated-projection/assets/css/main.css' %}">
+        <link rel="shortcut icon" type="imagepng" href="/static/user_dashboard/images/favicon.ico">
+    </head>
+    <body>
+        <div class = "container">
+            <h2 class = "main_title">Social Climbers</h2>
+            <div class = "disclaimer">
+                <p>** for demonstration purposes, the invitation code form input is pre-populated with a code **</p>
+                <p>*** if you would like to sign in as an admin user, please use the following credentials: **</p>
+                <p>*** Email: demo@gmail.com ***</p>
+                <p>*** Password: DjangoDemo ***</p>
+            </div>
+            <div class = "home_header">
+                <h4>Powered by Django</h4>
+                <form action="/login">
+                    {% csrf_token %}
+                    <input type="submit" value = "Sign in">
+                </form>
+                <h4>Have an Invitation Code?</h4>
+                <form action="/invitation_code" method = "POST">
+                    {% csrf_token %}
+                    <input id = "invitation" type="password" name= "invitation_code" value = "1234" placeholder="enter invitation code">
+                    <input type="submit" value = "Sign up">
+                </form>   
+            </div>
+            <hr>
+            <div class = "info">
+                <h3>Welcome to the Rock Climber's Dashboard</h3>
+                <h5>Manage Climbers (admin)</h5>
+                <p>Using this application as an admin, you'll be able to add and remove climbers, as well as edit their profiles.</p>
+                <h5>Edit Profile</h5>
+                <p>Climbers will be able to edit their profile information and login credentials. All passwords are encryped using Bcrypt.</p>
+                <h5>Leave Messages</h5>
+                <p>Climbers will be able to leave a messages to another climbers, and comment on those messages. Plan your next climbing trip!</p>
+            </div>
+            <p class = "disclaimer">Made by Richard Rosenfeld</p>
+        </div>
+    </body>
+</html>
