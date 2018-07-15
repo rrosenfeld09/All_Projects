@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Basic/Basic.csproj",
-      "projectName": "Basic",
-      "projectPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Basic/Basic.csproj",
+      "projectUniqueName": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/Basic 13.csproj",
+      "projectName": "Basic 13",
+      "projectPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/Basic 13.csproj",
       "packagesPath": "/Users/richardrosenfeld/.nuget/packages/",
-      "outputPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Basic/obj/",
+      "outputPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

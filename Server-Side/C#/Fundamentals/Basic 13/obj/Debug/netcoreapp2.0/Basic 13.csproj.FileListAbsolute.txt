@@ -1,0 +1,11 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/bin/Debug/netcoreapp2.0/Basic 13.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/bin/Debug/netcoreapp2.0/Basic 13.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/bin/Debug/netcoreapp2.0/Basic 13.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/bin/Debug/netcoreapp2.0/Basic 13.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/bin/Debug/netcoreapp2.0/Basic 13.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/obj/Debug/netcoreapp2.0/Basic 13.csprojResolveAssemblyReference.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/obj/Debug/netcoreapp2.0/Basic 13.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/obj/Debug/netcoreapp2.0/Basic 13.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/obj/Debug/netcoreapp2.0/Basic 13.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/obj/Debug/netcoreapp2.0/Basic 13.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Basic 13/obj/Debug/netcoreapp2.0/Basic 13.pdb
