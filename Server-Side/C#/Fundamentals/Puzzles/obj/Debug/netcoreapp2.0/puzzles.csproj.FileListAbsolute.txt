@@ -1,11 +1,11 @@
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/bin/Debug/netcoreapp2.0/puzzles.deps.json
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/bin/Debug/netcoreapp2.0/puzzles.runtimeconfig.json
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/bin/Debug/netcoreapp2.0/puzzles.runtimeconfig.dev.json
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/bin/Debug/netcoreapp2.0/puzzles.dll
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/bin/Debug/netcoreapp2.0/puzzles.pdb
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/obj/Debug/netcoreapp2.0/puzzles.csprojResolveAssemblyReference.cache
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/obj/Debug/netcoreapp2.0/puzzles.csproj.CoreCompileInputs.cache
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/obj/Debug/netcoreapp2.0/puzzles.AssemblyInfoInputs.cache
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/obj/Debug/netcoreapp2.0/puzzles.AssemblyInfo.cs
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/obj/Debug/netcoreapp2.0/puzzles.dll
-/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/obj/Debug/netcoreapp2.0/puzzles.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.csprojResolveAssemblyReference.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.pdb

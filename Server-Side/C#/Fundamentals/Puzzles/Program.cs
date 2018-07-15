@@ -1,78 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace puzzles
+namespace Puzzles
 {
     class Program
     {
         static void Main(string[] args)
         {
             // RandomArray();
-            // CoinFlip();
-            // TossMultipleCoins(100);
-            // Names();
+            // TossCoin();
+            TossMultipleCoins(5);
         }
 
-        // random array
+        // Random Array
         public static int[] RandomArray()
         {
-            List<int> FirstList = new List<int>();
-            Random RandNum = new Random();
-            for(int i = 0; i < 10; i++)
+            Random rand = new Random();
+            List<int> newList = new List<int>();
+            for (int i = 0; i < 10; i++)
             {
-                FirstList.Add(RandNum.Next(5,26));
+                newList.Add(rand.Next(5, 26));
             }
-            foreach (int num in FirstList)
+            int[] final = newList.ToArray();
+            foreach (int i in final)
             {
-                Console.WriteLine(num);
+                Console.WriteLine(i);
             }
-            int[] final = FirstList.ToArray();
             return final;
         }
 
-        // Coin flip
-        public static string CoinFlip()
+        // Coin Flip
+        public static string TossCoin()
         {
-            Random flip = new Random();
-            int result = flip.Next(0,2);
+            Console.WriteLine("Tossing Coin...");
+            Random rand = new Random();
+            int result = rand.Next(0,2);
             string final = "";
-            if(result == 0)
+            if (result == 0)
             {
-                Console.WriteLine("Tails!");
-                Console.WriteLine(result);
-                final = "tails";
+                final = "Tails";
             }
             else
             {
-                Console.WriteLine("Heads!");
-                Console.WriteLine(result);
-                final = "heads";            
+                final = "Heads";
             }
-            return final;
-        }
-
-        public static double TossMultipleCoins(int x)
-        {
-            double tally = 0;
-            for(int i = 0; i < x; i++)
-            {
-               string result = CoinFlip();
-               if(result == "heads")
-               {
-                    Console.WriteLine("=====" + result + "=====");
-                    tally++;
-               }
-               else
-               {
-                    Console.WriteLine("+++++" + result + "+++++");
-               }
-            }
-            double final = tally/x;
             Console.WriteLine(final);
             return final;
         }
 
-        // names
+        public static double TossMultipleCoins(int num)
+        {
+            double numHeads = 0;
+            double total = 0;
+            for (int i = 0; i < num; i++)
+            {
+                string result = TossCoin();
+                if (result == "Heads")
+                {
+                    numHeads += 1;
+                    total += 1;
+                }
+                else
+                {
+                    total += 1;
+                }
+            }
+            double final = numHeads/total;
+            Console.WriteLine(final);
+            return final;
+        }
+
+        // Names
         public static string[] Names()
         {
             string[] arr = {"Todd", "Tiffany", "Charlie", "Geneva", "Sydney"};
@@ -111,6 +109,5 @@ namespace puzzles
 
             return final;
         }
-
     }
 }

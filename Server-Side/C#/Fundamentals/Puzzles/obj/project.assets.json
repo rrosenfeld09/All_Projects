@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/puzzles.csproj",
-      "projectName": "puzzles",
-      "projectPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/puzzles.csproj",
+      "projectUniqueName": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/Puzzles.csproj",
+      "projectName": "Puzzles",
+      "projectPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/Puzzles.csproj",
       "packagesPath": "/Users/richardrosenfeld/.nuget/packages/",
-      "outputPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/puzzles/obj/",
+      "outputPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/Puzzles/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "puzzles/1.0.0": {
+      "Puzzles/1.0.0": {
         "runtime": {
-          "puzzles.dll": {}
+          "Puzzles.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "puzzles/1.0.0": {
+    "Puzzles/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
