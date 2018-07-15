@@ -1,34 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Boxing
+namespace boxing
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<object> Boxing = new List<object>();
-            Boxing.Add(7);
-            Boxing.Add(28);
-            Boxing.Add(-1);
-            Boxing.Add(true);
-            Boxing.Add("chair");
-            
-            // for(int i = 0; i < Boxing.Count; i++)
-            // {
-            //     Console.WriteLine(Boxing[i]);
-            // }
+            List<object> newList = new List<object>();
+            newList.Add(7);
+            newList.Add(28);
+            newList.Add(-1);
+            newList.Add(true);
+            newList.Add("chair");
+
+            foreach(var i in newList)
+            {
+                Console.WriteLine(i);
+            }
 
             int sum = 0;
-            for(int i = 0; i < Boxing.Count; i++)
+            
+
+            foreach(var i in newList)
             {
-                if(Boxing[i] is int)
+                if(i is int)
                 {
-                    int New = (int) Boxing[i];
-                    sum += New;
+                    int iCasted = (int)i;
+                    sum += iCasted;
                 }
             }
             Console.WriteLine(sum);
+
         }
+
+
     }
 }

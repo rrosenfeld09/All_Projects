@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Boxing/1.0.0": {
+      "boxing/1.0.0": {
         "runtime": {
-          "Boxing.dll": {}
+          "boxing.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Boxing/1.0.0": {
+    "boxing/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

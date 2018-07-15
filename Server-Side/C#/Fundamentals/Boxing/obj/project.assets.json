@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Boxing/Boxing.csproj",
-      "projectName": "Boxing",
-      "projectPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Boxing/Boxing.csproj",
+      "projectUniqueName": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/boxing/boxing.csproj",
+      "projectName": "boxing",
+      "projectPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/boxing/boxing.csproj",
       "packagesPath": "/Users/richardrosenfeld/.nuget/packages/",
-      "outputPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Boxing/obj/",
+      "outputPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/boxing/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
