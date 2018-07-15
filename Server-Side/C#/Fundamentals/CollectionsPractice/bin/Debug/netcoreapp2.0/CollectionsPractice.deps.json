@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Collections/1.0.0": {
+      "CollectionsPractice/1.0.0": {
         "runtime": {
-          "Collections.dll": {}
+          "CollectionsPractice.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Collections/1.0.0": {
+    "CollectionsPractice/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
