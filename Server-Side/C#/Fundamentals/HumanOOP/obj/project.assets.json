@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Human/Human.csproj",
-      "projectName": "Human",
-      "projectPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Human/Human.csproj",
+      "projectUniqueName": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/HumanOOP/HumanOOP.csproj",
+      "projectName": "HumanOOP",
+      "projectPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/HumanOOP/HumanOOP.csproj",
       "packagesPath": "/Users/richardrosenfeld/.nuget/packages/",
-      "outputPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Human/obj/",
+      "outputPath": "/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/Language Fundamentals/Projects/Take 2/HumanOOP/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

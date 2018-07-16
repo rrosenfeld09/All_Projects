@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Human/1.0.0": {
+      "HumanOOP/1.0.0": {
         "runtime": {
-          "Human.dll": {}
+          "HumanOOP.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Human/1.0.0": {
+    "HumanOOP/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
