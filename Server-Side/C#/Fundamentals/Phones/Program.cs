@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Phones
 {
@@ -7,14 +6,16 @@ namespace Phones
     {
         static void Main(string[] args)
         {
-            Galaxy s8 = new Galaxy("s8", 100, "Sprint", "Boo bop beep");
-            Nokia elevenHundred = new Nokia("1100", 80, "Verizon", "Zip zoop zeep");
+            Galaxy s8 = new Galaxy("s8", 100, "Sprint", "ding ding ding");
+            Nokia elevenHundred = new Nokia("1100", 80, "Verizon", "boop bot beep");
 
             s8.DisplayInfo();
-            elevenHundred.DisplayInfo();
-            s8.Ring();
-            elevenHundred.Unlock();
+            Console.WriteLine(s8.Ring());
+            Console.WriteLine(s8.Unlock());
 
+            elevenHundred.DisplayInfo();
+            Console.WriteLine(elevenHundred.Ring());
+            Console.WriteLine(elevenHundred.Unlock());
         }
     }
 }

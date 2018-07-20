@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/richard.rosenfeld/Documents/tempCD/Phones/Phone.csproj",
-      "projectName": "Phone",
-      "projectPath": "/Users/richard.rosenfeld/Documents/tempCD/Phones/Phone.csproj",
+      "projectUniqueName": "/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/WizardNinjaSamurai.csproj",
+      "projectName": "WizardNinjaSamurai",
+      "projectPath": "/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/WizardNinjaSamurai.csproj",
       "packagesPath": "/Users/richard.rosenfeld/.nuget/packages/",
-      "outputPath": "/Users/richard.rosenfeld/Documents/tempCD/Phones/obj/",
+      "outputPath": "/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

@@ -5,10 +5,10 @@ namespace Phones
 {
     public abstract class Phone 
     {
-        protected string _versionNumber;
-        protected int _batteryPercentage;
-        protected string _carrier;
-        protected string _ringTone;
+        public string _versionNumber;
+        public int _batteryPercentage;
+        public string _carrier;
+        public string _ringTone;
         public Phone(string versionNumber, int batteryPercentage, string carrier, string ringTone){
             _versionNumber = versionNumber;
             _batteryPercentage = batteryPercentage;
@@ -16,6 +16,6 @@ namespace Phones
             _ringTone = ringTone;
         }
         public abstract void DisplayInfo();
-    }       
+    }
 }
-
+        

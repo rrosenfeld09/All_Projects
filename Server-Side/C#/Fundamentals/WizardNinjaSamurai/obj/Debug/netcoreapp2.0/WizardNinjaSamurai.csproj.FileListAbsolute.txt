@@ -1,0 +1,11 @@
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/bin/Debug/netcoreapp2.0/WizardNinjaSamurai.deps.json
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/bin/Debug/netcoreapp2.0/WizardNinjaSamurai.runtimeconfig.json
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/bin/Debug/netcoreapp2.0/WizardNinjaSamurai.runtimeconfig.dev.json
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/bin/Debug/netcoreapp2.0/WizardNinjaSamurai.dll
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/bin/Debug/netcoreapp2.0/WizardNinjaSamurai.pdb
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/obj/Debug/netcoreapp2.0/WizardNinjaSamurai.csprojResolveAssemblyReference.cache
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/obj/Debug/netcoreapp2.0/WizardNinjaSamurai.csproj.CoreCompileInputs.cache
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/obj/Debug/netcoreapp2.0/WizardNinjaSamurai.AssemblyInfoInputs.cache
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/obj/Debug/netcoreapp2.0/WizardNinjaSamurai.AssemblyInfo.cs
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/obj/Debug/netcoreapp2.0/WizardNinjaSamurai.dll
+/Users/richard.rosenfeld/Documents/tempCD/WizardNinjaSamurai/obj/Debug/netcoreapp2.0/WizardNinjaSamurai.pdb
