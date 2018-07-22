@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "header">
+                <p><a href="/">Home</a> | <a href="/projects">Projects |</a> <a href="/contact">Contacts</a></p>
+                <h3>Contact Me!</h3>
+            </div>
+            <form action="/sendingData" method="POST">
+                Name: <input type="text" name = "name">
+                Email: <input type="text" name="email">
+                Message <textarea name="message" cols="30" rows="10"></textarea>
+                <input type="submit" value = "Send">
+            </form>
+        </div>
+    </body>
+</html>

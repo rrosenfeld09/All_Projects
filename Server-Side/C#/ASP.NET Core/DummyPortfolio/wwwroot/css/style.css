@@ -1,0 +1,51 @@
+
+
+.header{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+img{
+    width: 400px;
+}
+
+.lorem{
+    width: 500px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 90px;
+    margin-left: 200px;
+    font-style: italic;
+}
+
+.projects{
+    padding: 5px;
+    width: 600px;
+    height: 300px;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.projects img{
+    width: 100px;
+
+}
+
+form{
+    width: 500px;
+    margin: auto;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
