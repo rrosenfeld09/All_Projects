@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Submitted Info</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <div class = "container">
+            <fieldset>
+                <legend>Submitted Info</legend>
+                <div class = "things">
+                    <p>Name:</p>
+                    <p>Your City:</p>
+                    <p>Your Favorite Language:</p>
+                    <p>Comment:</p>
+                </div>
+                <div class = "info">
+                    <p>@ViewBag.Name</p> 
+                    <p>@ViewBag.Location</p> 
+                    <p>@ViewBag.Language</p> 
+                    <p>@ViewBag.Comment</p> 
+                </div>
+                <form action="/" method = "GET">
+                    <input type="submit" value = "Go Back">
+            </form>
+            </fieldset>
+        </div>
+    </body>
+</html>
