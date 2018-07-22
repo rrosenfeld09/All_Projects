@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Razor</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <h1>Playing around with imbedded C# with the Razor engine</h1>
+    @{
+        string[] nameArray = {"Richard", "Virginia", "Brad", "John", "Ethan", "Charles"};
+
+        foreach(string name in nameArray)
+        {
+            if (name.StartsWith("C"))
+            {
+                <p class = "cStart">@name</p>
+                Console.WriteLine("starts with c");
+            }
+            else
+            {
+                <p>@name</p>
+            }
+        }
+    }
+
+</body>
+</html>
