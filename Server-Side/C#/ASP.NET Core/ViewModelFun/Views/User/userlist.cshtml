@@ -1,0 +1,22 @@
+@model ViewModelFun.Models.UsersList
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Users</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <h1>Here are some users!</h1>
+        @{
+            foreach (var u in @Model.UList)
+            {
+                <p>@u.FirstName @u.LastName</p>
+            }
+        }
+    </body>
+</html>
+
+<!-- why did using 'var' work for the foreach when neither 'Object' or 'Users' would? -->
