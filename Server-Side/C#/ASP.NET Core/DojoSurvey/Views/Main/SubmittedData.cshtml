@@ -1,3 +1,6 @@
+@model DojoSurvey.Models.User
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,10 +21,10 @@
                     <p>Comment:</p>
                 </div>
                 <div class = "info">
-                    <p>@ViewBag.Name</p> 
-                    <p>@ViewBag.Location</p> 
-                    <p>@ViewBag.Language</p> 
-                    <p>@ViewBag.Comment</p> 
+                    <p>@Model.Name</p> 
+                    <p>@Model.Location</p> 
+                    <p>@Model.Language</p> 
+                    <p>@Model.Comment</p> 
                 </div>
                 <form action="/" method = "GET">
                     <input type="submit" value = "Go Back">

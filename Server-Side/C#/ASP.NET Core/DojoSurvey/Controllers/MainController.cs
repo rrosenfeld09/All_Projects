@@ -1,5 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
+using DojoSurvey.Models;
 
 namespace DojoSurvey.Controllers
 {
@@ -14,13 +15,16 @@ namespace DojoSurvey.Controllers
 
         [HttpPost]
         [Route("process_data")]
-        public IActionResult SubmittedData(string name, string location, string language, string comment)
+        public IActionResult SubmittedData(User submittedUser)
         {
-            ViewBag.Name = name;
-            ViewBag.Location = location;
-            ViewBag.Language = language;
-            ViewBag.Comment = comment;
-            return View();
+            User newUser = new User()
+            {
+                Name = submittedUser.Name,
+                Location = submittedUser.Location,
+                Language = submittedUser.Language,
+                Comment = submittedUser.Comment
+            };
+            return View(newUser);
         }
     }
 }
