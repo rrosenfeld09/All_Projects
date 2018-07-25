@@ -1,0 +1,21 @@
+body{
+    width: 900px;
+    margin: auto;
+}
+
+
+input[type=text], select, textarea {
+    width: 97%;
+    padding: 12px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+
+}
+
+span{
+    display: block;
+    color: red;
+}
