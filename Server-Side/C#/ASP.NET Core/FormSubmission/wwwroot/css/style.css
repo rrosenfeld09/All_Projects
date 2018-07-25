@@ -4,7 +4,7 @@ body{
 }
 
 
-input[type=text], select, textarea {
+input, select, textarea {
     width: 97%;
     padding: 12px;
     padding-right: 0px;

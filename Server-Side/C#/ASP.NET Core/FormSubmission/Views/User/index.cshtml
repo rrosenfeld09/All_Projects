@@ -13,7 +13,7 @@
         
         <form asp-action="Create" asp-controller="User" method = "POST">
             <span asp-validation-for="FirstName"></span>
-            <label for="FirstName">First Name: </label>
+            <label asp-for="FirstName">First Name: </label>
             <input asp-for="FirstName">
 
             <span asp-validation-for="LastName"></span>
@@ -31,7 +31,7 @@
             <span asp-validation-for="Password"></span>
             Password: <input asp-for="Password" type="password">
 
-            <input value = "Send info" type="submit">
+            <input value = "Send Info" type="submit">
         </form>
     </body>
 </html>
