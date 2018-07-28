@@ -1,0 +1,37 @@
+@using DojoSurvey.Models
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Success</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Success!</h1>
+            <fieldset>
+                <legend>Submitted Info</legend>
+                <div class = "things">
+                    <p>Name:</p>
+                    <p>Favorit City:</p>
+                    <p>Favorite Language: </p>
+                    <p>Comment: </p>
+                </div>
+                <div class = "info">
+                    <p>@Model.Name</p>
+                    <p>@Model.Location</p>
+                    <p>@Model.Language</p>
+                    <p>@Model.Comment</p>
+                </div>
+            </fieldset>
+            <form action="/">
+                <input type="submit" value = "Go Back">
+            </form>
+        </div>
+
+    </body>
+</html>

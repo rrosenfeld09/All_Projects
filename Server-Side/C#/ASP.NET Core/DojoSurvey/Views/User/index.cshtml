@@ -1,3 +1,4 @@
+@model User
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,22 +12,34 @@
         <div class = "container">
             <fieldset>
                 <legend>Dojo Survey</legend>
-                <form action="/process_data" method="POST">
-                    Your Name: <input type="text" name = "Name">
-                    Your City: <select name="Location">
+                <form asp-action="Create" asp-controller="User" method="POST">
+                    <span asp-validation-for="Name"></span>
+                    <label asp-for="Name">Your Name: </label>
+                    <input asp-for="Name">
+
+                    <span asp-validation-for="Location"></span>
+                    <label asp-for="Location">Your Favorite City: </label>
+                    <select asp-for="Location">
                         <option value="Washington DC">Washington DC</option>
                         <option value="San Francisco">San Francisco</option>
                         <option value="New York">New York</option>
                         <option value="Austin">Austin</option>
                     </select>
-                    Favorite Language: <select name="Language">
+
+                    <span asp-validation-for="Language"></span>
+                    <label for="Language">Favorite Language:</label>
+                    <select asp-for="Language">
                         <option value="C#">C#</option>
                         <option value="Python">Python</option>
                         <option value="Java">Java</option>
                         <option value="PHP">PHP</option>
                     </select>
-                    Comment: <textarea name="Comment" cols="30" rows="10"></textarea>
-                    <input type="submit" value = "Submit">
+
+                    <span asp-validation-for="Comment"></span>
+                    <label asp-for="Comment">Comment (optional): </label>
+                    <textarea asp-for="Comment" cols="30" rows="10"></textarea>
+
+                    <input type="submit" value = "Submit Info!">
                 </form>
             </fieldset>
         </div>

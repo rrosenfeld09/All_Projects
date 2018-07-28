@@ -22,4 +22,8 @@ input[type=text], select, textarea {
 .info{
     display: inline-block;
     margin-left: 35px;
+    vertical-align: top;
+}
+span{
+    color: red;
 }
