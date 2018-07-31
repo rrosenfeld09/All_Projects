@@ -31,6 +31,15 @@
                 <input type="submit" value = "Sleep">
             </form>
             <fieldset>
+                @if(ViewBag.Emotion ==1)
+                {
+                    <img src="~/img/happy.png" alt="picture of happy homer">
+                }
+                else 
+                {
+                    <img src="~/img/sad.png" alt="picture of sad homer">
+                }
+
                 <p>@ViewBag.Message</p>
             </fieldset>
         </fieldset>

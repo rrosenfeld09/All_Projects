@@ -20,3 +20,7 @@ input{
     background-color: aqua;
     border-radius: 2px;
 }
+
+img{
+    width: 200px;
+}
