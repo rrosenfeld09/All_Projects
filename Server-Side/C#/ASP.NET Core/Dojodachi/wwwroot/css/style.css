@@ -1,0 +1,22 @@
+body{
+    margin: auto;
+    width: 500px;
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+
+}
+
+p{
+    display: inline-block;
+}
+
+form{
+    display: inline-block;
+    margin: 10px;
+}
+
+input{
+    background-color: aqua;
+    border-radius: 2px;
+}

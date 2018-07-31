@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dojodachi</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <h1>Dojodachi</h1>
+        <div class = "header">
+            <p>Fullness: @ViewBag.Fullness</p>
+            <p>Happiness: @ViewBag.Happiness</p>
+            <p>Meals: @ViewBag.Meals</p>
+            <p>Energy: @ViewBag.Energy</p>
+
+        </div>
+
+        <fieldset>
+            <form action="/feed">
+                <input type="submit" value = "Feed">
+            </form>
+            <form action="/play">
+                <input type="submit" value = "Play">
+            </form>
+            <form action="/work">
+                <input type="submit" value = "Work">
+            </form>
+            <form action="/sleep">
+                <input type="submit" value = "Sleep">
+            </form>
+            <fieldset>
+                <p>@ViewBag.Message</p>
+            </fieldset>
+        </fieldset>
+        @if(ViewBag.Playing == 0)
+        {
+        <form action="/reset">
+            <input type="submit" value = "Start New Game!">
+        </form>
+        }
+    </body>
+</html>
