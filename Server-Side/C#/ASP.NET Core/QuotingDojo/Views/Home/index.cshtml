@@ -1,0 +1,30 @@
+@model Quote
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Quoting Dojo</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Welcome To Quoting Dojo</h1>
+            <form asp-action="NewQuote" asp-controller="Home" method="POST">
+                <span asp-validation-for="Name"></span>
+                <label asp-for="Name">Your Name:</label>
+                <input asp-for="Name">
+
+                <span asp-validation-for="QuoteString"></span>
+                <label asp-for="QuoteString">Your Quote</label>
+                <textarea asp-for= "QuoteString" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="Add My Quote!">
+            </form>
+            <form action="quotes">
+                <input type="submit" value = "Skip to the Quotes!">
+            </form>
+        </div>
+    </body>
+</html>

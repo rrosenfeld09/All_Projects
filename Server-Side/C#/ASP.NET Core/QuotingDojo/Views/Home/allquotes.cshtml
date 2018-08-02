@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Quotes</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <div class = "container">
+            <fieldset>
+                <h1>Here's all of the awesome quotes!</h1>
+                @foreach(var quote in ViewBag.AllQuotes)
+                {
+                    <p>"@quote["quote"]"</p>
+                    <p class = "info">-@quote["name"] on @quote["created_on"]</p>
+                    <hr>
+                }
+            </fieldset>
+            <form action="/">
+                <input type="submit" value = "Go Back!">
+            </form>
+        </div>
+    </body>
+</html>
