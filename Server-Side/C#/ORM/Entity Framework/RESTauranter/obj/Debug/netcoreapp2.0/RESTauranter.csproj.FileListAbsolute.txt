@@ -1,0 +1,11 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/bin/Debug/netcoreapp2.0/RESTauranter.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/bin/Debug/netcoreapp2.0/RESTauranter.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/bin/Debug/netcoreapp2.0/RESTauranter.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/bin/Debug/netcoreapp2.0/RESTauranter.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/bin/Debug/netcoreapp2.0/RESTauranter.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.csprojResolveAssemblyReference.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.pdb
