@@ -11,8 +11,8 @@
         
    
         <h1>yo, welcome to the homepage, @Model.user.first_name</h1>
-        <h3><fieldset> Your balance is @Model.user.balance</fieldset></h3>
-
+        <h3><fieldset> Your balance is $@Model.user.balance</fieldset></h3>
+        <span class = "error">@ViewBag.Error</span>
         <form action="/adjustmoney/@Model.user.userid">
             <select name="dollar_amount">
             @{
@@ -29,8 +29,9 @@
         <h3>Transactions:</h3>
         @foreach(var t in @Model.tranList)
         {
-            <p>t.amount</p>
+            <p>@t.amount</p>
         }
         <a href="/">Go Home</a>
+        <a href="/logout">Logout</a>
      </body>
 </html>

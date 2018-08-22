@@ -44,5 +44,34 @@ namespace BankAccounts.Controllers
             return View("Index");
         }
 
+        [HttpGet("login")]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost("login_action")]
+        public IActionResult UserLogin(LoginUser loggedUser)
+        {
+            if(ModelState.IsValid)
+            {
+                User returnedUser = _context.Users.Where(p => p.email == loggedUser.email).FirstOrDefault();
+                if (returnedUser == null)
+                {
+                    return View("Login");
+                }
+                else
+                {
+                    var Hasher = new PasswordHasher<User>();
+                    if (0 != Hasher.VerifyHashedPassword(returnedUser, returnedUser.password, loggedUser.password))
+                    {
+                        HttpContext.Session.Clear();
+                        HttpContext.Session.SetInt32("userid", returnedUser.userid);
+                        return RedirectToAction("HomePage", "Account", new {userid = returnedUser.userid});
+                    }
+                }
+            }
+            return View("login");
+        }
     }
 }

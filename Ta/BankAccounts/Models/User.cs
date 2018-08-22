@@ -37,4 +37,13 @@ namespace BankAccounts.Models
             updated_at = DateTime.UtcNow;
         }
     }
+
+    public class LoginUser
+    {
+        [Required]
+        [EmailAddress]
+        public string email {get; set;}
+        [Required]
+        public string password {get; set;}
+    }
 }

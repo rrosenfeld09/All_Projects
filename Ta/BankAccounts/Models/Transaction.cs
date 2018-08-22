@@ -14,8 +14,9 @@ namespace BankAccounts.Models
         public User user {get; set;}
         public int userid {get; set;}
 
-        public Transaction(User submittedUser)
+        public Transaction(User submittedUser, int submittedAmount)
         {
+            amount = submittedAmount;
             user = submittedUser;
             userid = submittedUser.userid;
             created_at = DateTime.UtcNow;

@@ -23,3 +23,7 @@ span{
     display: block;
     color: red;
 }
+
+.error{
+    color: red;
+}
