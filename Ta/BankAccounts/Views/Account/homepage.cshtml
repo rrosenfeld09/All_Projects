@@ -1,0 +1,36 @@
+@model UserTransactionViewModel
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HomePage</title>
+    </head>
+    <body>
+        
+   
+        <h1>yo, welcome to the homepage, @Model.user.first_name</h1>
+        <h3><fieldset> Your balance is @Model.user.balance</fieldset></h3>
+
+        <form action="/adjustmoney/@Model.user.userid">
+            <select name="dollar_amount">
+            @{
+                for (int i = -500; i <= 500; i+=100)
+                {
+                    <option value="@i">@i</option>
+                }
+            }
+            </select>
+
+            <input type="submit" value = "Withdraw / Deposit">
+        </form>
+
+        <h3>Transactions:</h3>
+        @foreach(var t in @Model.tranList)
+        {
+            <p>t.amount</p>
+        }
+        <a href="/">Go Home</a>
+     </body>
+</html>

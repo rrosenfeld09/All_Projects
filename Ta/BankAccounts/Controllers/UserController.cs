@@ -11,7 +11,6 @@ namespace BankAccounts.Controllers
 
     public class UserController : Controller
     {
-
         public MyContext _context;
 
         public UserController(MyContext context)
@@ -36,15 +35,14 @@ namespace BankAccounts.Controllers
                 _context.Users.Add(submittedUser);
                 _context.SaveChanges();
 
-                //create account for new user
-                User recent = _context.Users.OrderByDescending(p => p.created_at).Take(1).FirstOrDefault();
-                Account newAccount = new Account(recent.id);
-                _context.Accounts.Add(newAccount);
-                _context.SaveChanges();
+                User returnedUser = _context.Users.OrderByDescending(p => p.created_at).FirstOrDefault();
+                Console.WriteLine(returnedUser.userid);
+                HttpContext.Session.SetInt32("userid", returnedUser.userid);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("HomePage", "Account", new {userid = returnedUser.userid});
             }
             return View("Index");
         }
+
     }
 }
