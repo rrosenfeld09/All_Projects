@@ -29,6 +29,13 @@ namespace BankAccounts.Controllers
         {
             if(ModelState.IsValid)
             {
+                // check to see if user is already registered
+                if(_context.Users.Any(p => p.email == submittedUser.email))
+                {
+                    TempData["Error"] = "This email is already registered. Please sign in.";
+                    return RedirectToAction("Index");
+                }
+
                 //create new user profile
                 PasswordHasher<User> Hasher = new PasswordHasher<User>();
                 submittedUser.password = Hasher.HashPassword(submittedUser, submittedUser.password);

@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
  
 
 namespace BankAccounts.Controllers
@@ -44,7 +45,9 @@ namespace BankAccounts.Controllers
 
             if(dollar_amount < 0 && returnedUser.balance + dollar_amount < 0)
             {
-                return Json("Insufficient funds, please deposit money");
+
+                TempData["Error"] = "Insufficient funds";
+                return RedirectToAction("HomePage", new {userid = userid});
             }
 
             returnedUser.balance += dollar_amount;
