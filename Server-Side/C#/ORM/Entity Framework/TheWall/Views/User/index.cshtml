@@ -1,0 +1,29 @@
+@model User
+
+<h2>Registration</h2>
+<h4 class = "error">@TempData["Error"]</h4>
+<form asp-action="RegisterUser" asp-controller="User" method="POST">
+    <span asp-validation-for="first_name"></span>
+    <label asp-for="first_name">First Name: </label>
+    <input asp-for="first_name">
+
+    <span asp-validation-for="last_name"></span>
+    <label asp-for="last_name">Last Name: </label>
+    <input asp-for="last_name">
+
+    <span asp-validation-for="email"></span>
+    <label asp-for="email">Email Address: </label>
+    <input asp-for="email">
+
+    <span asp-validation-for="password"></span>
+    <label asp-for="password">Password: </label>
+    <input asp-for="password" type="password">
+
+    <span asp-validation-for="confirm_password"></span>
+    <label asp-for="confirm_password">Confirm Password: </label>
+    <input asp-for="confirm_password" type="password">
+
+    <input type="submit" value="Register">
+</form>
+
+<a href="/login">Already have an account? Login here.</a>

@@ -1,0 +1,46 @@
+@model UMCViewModel
+
+<h1>Welcome to the homepage, @Model.user.first_name</h1>
+
+
+<form action="/add_message" method="POST">
+    <label for="message">Post a Message: </label>
+    <input name="message" placeholder="Write Message...">
+    <input class = "messageButton" type="submit" value="Post Message">
+</form>
+
+
+
+@{
+    foreach(var message in @Model.messages)
+    {
+
+        <fieldset>
+            <p>@message.user.first_name <h4>@message.message</h4></p>
+            <p>-@message.created_at.ToString("D")</p>
+            @foreach(var comment in @Model.comments)
+            {
+                @if(@comment.message_id == @message.message_id)
+                {
+                    <fieldset class = "comment">
+                        <p>@comment.user.first_name - <h4>@comment.comment</h4> -  @comment.created_at.ToString("D")</p>
+                        @if(@comment.user_id == @Model.user.user_id)
+                        {
+                            <a href="/delete_comment/@comment.comment_id/@comment.user_id">Delete</a>
+                        }
+                    </fieldset>
+                }
+
+            }
+
+            <form action="/create_comment" method = "POST">
+                <input name="comment" placeholder="Write Comment...">
+                <input type="hidden" name="message_id" value="@message.message_id">
+                <input class = "commentButton" type="submit" value="Comment on Post">
+            </form>
+        </fieldset>
+    
+    }
+}
+
+<a href="/logout">Logout</a>
