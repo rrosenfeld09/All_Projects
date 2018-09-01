@@ -1,0 +1,70 @@
+@model DashboardViewModel
+<h1>Dashboard</h1>
+
+<table>
+    <tr>
+        <th>Wedding</th>
+        <th>Date</th>
+        <th>Guest Count</th>
+        <th>Action</th>
+    </tr>
+
+@foreach(var wedding in @Model.allWeddings)
+{
+    <tr>
+        <td><a href="/wedding_details/@wedding.wedding_id">@wedding.wedder_one & @wedding.wedder_two</a></td>
+        <td>@wedding.wedding_date.ToString("D")</td>
+        @{
+            int guestCount = 0;
+            foreach(var rsvp in @Model.rsvps)
+            {
+                if(rsvp.wedding_id == wedding.wedding_id)
+                {
+                    guestCount += 1;
+                }
+            }
+            <td>@guestCount</td>
+        }
+        @{
+            int didTheyRsvp = 0;
+            foreach(var rsvp in @Model.rsvps)
+            {
+                if(@rsvp.wedding_id == @wedding.wedding_id && @rsvp.user_id == @Model.loggedUser.user_id)
+                {
+                    didTheyRsvp = 1;    
+                }
+            }
+            if(didTheyRsvp == 1)
+            {
+                <td><a href="/unrsvp/@Model.loggedUser.user_id/@wedding.wedding_id">UN-RSVP</a></td>
+
+            }
+            else if(@wedding.user_id == @Model.loggedUser.user_id)
+            {
+                <td><a href="/delete/@wedding.wedding_id">Delete</a></td>
+            }
+    
+            else
+            {
+                <td><a href="/rsvp/@wedding.wedding_id">RSVP</a></td>
+            }
+
+        }
+        
+
+        
+    </tr>
+}
+</table>
+
+
+
+<form asp-action="NewWedding" asp-controller="Wedding">
+    <input class = "weddingButton" type="submit" value = "New Wedding">
+</form>
+<a href="/logout">Logout</a>
+
+
+
+
+

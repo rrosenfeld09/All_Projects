@@ -1,0 +1,51 @@
+@model RegLoginViewModel
+
+<span class ="error">@TempData["Error"]</span>
+<div class = "login_page">
+    <h2>Register</h2>
+    <form asp-action="CreateUser" asp-controller="User" method="POST">
+        <div>
+            <span asp-validation-for="regUser.first_name"></span>
+            <label asp-for="regUser.first_name">First Name: </label>
+            <input asp-for="regUser.first_name">
+        </div>
+        <div>
+            <span asp-validation-for="regUser.last_name"></span>
+            <label asp-for="regUser.last_name">Last Name: </label>
+            <input asp-for="regUser.last_name">
+        </div>
+        <div>
+            <span asp-validation-for="regUser.email"></span>
+            <label asp-for="regUser.email">Email:  </label>
+            <input asp-for="regUser.email">
+        </div>
+        <div>
+            <span asp-validation-for="regUser.password"></span>
+            <label asp-for="regUser.password">Password: </label>
+            <input asp-for="regUser.password" type="password">
+        </div>
+        <div>
+            <span asp-validation-for="regUser.confirm_pw"></span>
+            <label asp-for="regUser.confirm_pw">Confirm Password: </label>
+            <input asp-for="regUser.confirm_pw" type="password">
+        </div>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+<span>@TempData["LoginError"]</span>
+<div class = "login_page">
+    <h2>Login</h2>
+    <form asp-action="Login" asp-controller="User" method="POST">
+        <span asp-validation-for="loginUser.email"></span>
+        <label asp-for="loginUser.email">Email: </label>
+        <input asp-for="loginUser.email">
+
+        <span asp-validation-for="loginUser.password"></span>
+        <label asp-for="loginUser.password">Password: </label>
+        <input asp-for="loginUser.password" type="password">
+
+        <input type="submit" value = "Login">
+    </form>
+</div>
+
