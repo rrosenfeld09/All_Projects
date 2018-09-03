@@ -1,0 +1,46 @@
+@model LogRegViewModel
+
+<span class = "error">@TempData["AlreadyRegisteredError"]</span>
+<fieldset class = "logindiv">
+    <legend>Register</legend>
+    <form asp-action="CreateUser" asp-controller="User" method="POST">
+        <span asp-validation-for="user.first_name"></span>
+        <label asp-for="user.first_name">First Name: </label>
+        <input asp-for="user.first_name">
+
+        <span asp-validation-for="user.last_name"></span>
+        <label asp-for="user.last_name">Last Name: </label>
+        <input asp-for="user.last_name">
+
+        <span asp-validation-for="user.email"></span>
+        <label asp-for="user.email">Email</label>
+        <input asp-for="user.email">
+
+        <span class = "error">@TempData["PasswordError"]</span>
+        <span asp-validation-for="user.password"></span>
+        <label asp-for="user.password">Password: </label>
+        <input asp-for="user.password" type="password">
+
+        <span asp-validation-for="user.confirm_pw"></span>
+        <label asp-for="user.confirm_pw">Confirm Password: </label>
+        <input asp-for="user.confirm_pw" type="password">
+
+        <input type="submit" value = "Register">
+    </form>
+</fieldset>
+
+<span class = "error">@TempData["LogginError"]</span>
+<fieldset>
+    <legend>Login</legend>
+    <form asp-action="LoginAction" asp-controller="User" method="POST">
+        <span asp-validation-for="loginUser.email"></span>
+        <label asp-for="loginUser.email">Email: </label>
+        <input asp-for="loginUser.email">
+
+        <span asp-validation-for="loginUser.password"></span>
+        <label asp-for="loginUser.password">Password: </label>
+        <input asp-for="loginUser.password" type="password">
+
+        <input type="submit" value = "Login">
+    </form>
+</fieldset>

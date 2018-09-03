@@ -1,0 +1,11 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.csprojResolveAssemblyReference.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/ORM/Projects/Entity Framework/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.pdb

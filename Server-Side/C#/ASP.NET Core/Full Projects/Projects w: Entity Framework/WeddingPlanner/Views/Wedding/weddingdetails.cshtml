@@ -1,0 +1,15 @@
+@model WeddingDetsViewModel
+
+<h3>@Model.wedding.wedder_one and @Model.wedding.wedder_two's Wedding</h3>
+<p>Date: @Model.wedding.wedding_date.ToString("D")</p>
+<h3>Guests:</h3>
+@{
+    foreach(var rsvp in @Model.rsvps)
+    {
+        <p>@rsvp.user.first_name @rsvp.user.last_name</p>
+    }
+}
+
+
+<a href="/logout">Logout</a>
+<a href="/dashboard">Dashboard</a>

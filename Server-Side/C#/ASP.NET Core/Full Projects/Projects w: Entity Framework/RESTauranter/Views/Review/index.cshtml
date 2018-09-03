@@ -1,0 +1,46 @@
+@model Review
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Submit a Review</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <h1>Write a New Review:</h1>
+        <form asp-action="AddReview" asp-controller="Review" method="POST">
+            
+            <span asp-validation-for="reviewer_name"></span>
+            <label asp-for="reviewer_name">Reviewer Name:</label>
+            <input asp-for="reviewer_name">
+
+            <span asp-validation-for="restaurant_name"></span>
+            <label asp-for="restaurant_name">Restaurant Name:</label>
+            <input asp-for="restaurant_name">
+
+            <span asp-validation-for="review"></span>
+            <label asp-for="review ">Review:</label>
+            <input asp-for="review">
+
+            <span asp-validation-for="date_of_visit"></span>
+            <label asp-for="date_of_visit">Date of Visit:</label>
+            <input class = "short" asp-for="date_of_visit" type = "date">
+
+            <span asp-validation-for="stars"></span>
+            <label asp-for="stars">Stars:</label>
+            <select class = "short" asp-for="stars">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <input class = "button" type="submit">
+        </form>
+        <a href="/success">View All Reviews</a>
+    </body>
+</html>
