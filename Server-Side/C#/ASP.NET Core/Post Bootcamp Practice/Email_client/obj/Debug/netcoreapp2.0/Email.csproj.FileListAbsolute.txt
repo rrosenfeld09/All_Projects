@@ -1,0 +1,10 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/bin/Debug/netcoreapp2.0/Email.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/bin/Debug/netcoreapp2.0/Email.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/bin/Debug/netcoreapp2.0/Email.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/bin/Debug/netcoreapp2.0/Email.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/bin/Debug/netcoreapp2.0/Email.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/obj/Debug/netcoreapp2.0/Email.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/obj/Debug/netcoreapp2.0/Email.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/obj/Debug/netcoreapp2.0/Email.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/obj/Debug/netcoreapp2.0/Email.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/Email/obj/Debug/netcoreapp2.0/Email.pdb

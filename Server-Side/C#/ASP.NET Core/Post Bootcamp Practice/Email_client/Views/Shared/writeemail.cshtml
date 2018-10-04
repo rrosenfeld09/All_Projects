@@ -1,0 +1,24 @@
+@model EmailMessage
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Write Email</title>
+</head>
+<body>
+    <h1>Write Email</h1>
+    <form asp-action="EmailAction" asp-controller="Email" method="POST">
+        <span asp-validation-for="send_to_email"></span>
+        <input asp-for="send_to_email" placeholder="Email address to send message to">
+
+        <span asp-validation-for="message"></span>
+        <textarea asp-for="message" placeholder="Message" cols="30" rows="10"></textarea>
+
+        <input type="submit" value = "Send Email">
+    </form>
+
+</body>
+</html>

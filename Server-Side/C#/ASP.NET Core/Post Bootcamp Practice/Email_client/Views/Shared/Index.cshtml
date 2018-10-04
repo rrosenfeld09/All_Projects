@@ -1,0 +1,40 @@
+@model LogReg
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login/Register</title>
+</head>
+<body>
+    <Fieldset>
+        <legend>Register</legend>
+        <form asp-action="RegisterAction" asp-controller="User" method="POST">
+            <span asp-validation-for="user.email"></span>
+            <input asp-for="user.email" placeholder="Email Address">
+
+            <span asp-validation-for="user.password"></span>
+            <input type="password" asp-for="user.password" placeholder="Password">
+
+            <span asp-validation-for="user.confirm_pw"></span>
+            <input type="password" asp-for="user.confirm_pw" placeholder="Confirm Password">
+
+            <input type="submit" value = "Register">
+        </form>
+    </Fieldset>
+    <fieldset>
+        <legend>Login</legend>
+        <form asp-action="LoginAction" asp-controller="User" method="POST">
+            <span asp-validation-for="loginUser.email"></span>
+            <input asp-for="loginUser.email" placeholder="Email">
+
+            <span asp-validation-for="loginUser.password"></span>
+            <input type="password" asp-for="loginUser.password" placeholder="Password">
+
+            <input type="submit" value="Login">
+        </form>
+    </fieldset>
+</body>
+</html>
