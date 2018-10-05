@@ -1,0 +1,24 @@
+@model ReplyViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email</title>
+</head>
+<body>
+    <h1>From @Model.email.user.email at @Model.email.created_at</h1>
+    <h1>@Model.email.message</h1>
+    <form asp-action="ReplyAction" asp-controller="Email" method="POST">
+        <input asp-for="reply.message" placeholder="reply message">
+
+        <input asp-for="reply.email_id" type="hidden" value="@Model.email.email_id">
+
+        <input type="submit" value="Send">
+
+    </form>
+    
+
+</body>
+</html>

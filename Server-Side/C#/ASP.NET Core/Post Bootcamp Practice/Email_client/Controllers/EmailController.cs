@@ -40,5 +40,36 @@ namespace Email.Controllers
             }
             return View("WriteEmail");
         }
+
+        [HttpGet("email_details/{email_id}")]
+        public IActionResult EmailDetails(int email_id)
+        {
+            EmailMessage email = _context.emails
+                .Where(p => p.email_id == email_id)
+                .Include(p => p.user)
+                .FirstOrDefault();
+
+            ReplyViewModel viewModel = new ReplyViewModel();
+
+            viewModel.replies = _context.replies.Where(p => p.email_id == email_id).ToList();
+
+            viewModel.email = email;
+
+            return View(viewModel);
+        }
+
+        [HttpPost("reply_action")]
+        public IActionResult ReplyAction(ReplyViewModel submittedReply)
+        {
+            if(ModelState.IsValid)
+            {
+                submittedReply.reply.user_id = (int)HttpContext.Session.GetInt32("loggedUser");
+                _context.replies.Add(submittedReply.reply);
+                _context.SaveChanges();
+                return RedirectToAction("EmailDetails", new{email_id = submittedReply.reply.email_id});
+            }
+
+            return RedirectToAction("EmailDetails", new{email_id = submittedReply.reply.email_id});
+        }
     }
 }

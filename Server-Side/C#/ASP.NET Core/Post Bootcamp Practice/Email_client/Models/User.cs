@@ -25,8 +25,11 @@ namespace Email.Models
 
         public List<EmailMessage> emails {get; set;}
 
+        public List<Reply> replies {get; set;}
+
         public User()
         {
+            replies = new List<Reply>();
             emails = new List<EmailMessage>();
             created_at = DateTime.Now;
             updated_at = DateTime.Now;

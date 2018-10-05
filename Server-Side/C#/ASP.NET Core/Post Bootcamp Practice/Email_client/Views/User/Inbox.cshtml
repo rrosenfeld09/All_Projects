@@ -17,7 +17,9 @@
             {
                 <fieldset>
                     <p>from: @email.user.email</p>
-                    <p>@email.message</p>
+                    <form action="/email_details/@email.email_id">
+                        <input type="submit" value="@email.message">                    
+                    </form>
                 </fieldset>
                 
             }

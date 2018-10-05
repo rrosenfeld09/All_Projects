@@ -10,5 +10,7 @@ namespace Email.Models
 
         public DbSet<EmailMessage> emails {get; set;}
 
+        public DbSet<Reply> replies {get; set;}
+
     }
 }

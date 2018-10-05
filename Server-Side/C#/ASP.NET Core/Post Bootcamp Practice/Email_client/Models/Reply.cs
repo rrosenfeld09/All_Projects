@@ -1,36 +1,35 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+
 namespace Email.Models
 {
-    public class EmailMessage
+    public class Reply
     {
         [Key]
-        public int email_id {get; set;}
+        public int reply_id {get; set;}
 
-        [Required]
-        public string send_to_email {get; set;}
-
-        public User user {get; set;}
-
-        public int user_id {get; set;}
-
-        [Required]
         public string message {get; set;}
 
         public DateTime created_at {get; set;}
 
         public DateTime updated_at {get; set;}
 
-        public List<Reply> replies {get; set;}
+        public User user {get; set;}
 
-        public EmailMessage()
+        public int user_id {get;set;}
+
+        public EmailMessage email {get; set;}
+
+        public int email_id {get; set;}
+
+        public Reply()
         {
-            replies = new List<Reply>();
             created_at = DateTime.Now;
             updated_at = DateTime.Now;
         }
+
     }
+
 }
