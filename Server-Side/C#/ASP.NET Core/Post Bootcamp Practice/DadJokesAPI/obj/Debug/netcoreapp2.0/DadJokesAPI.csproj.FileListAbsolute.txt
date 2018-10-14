@@ -1,0 +1,10 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/bin/Debug/netcoreapp2.0/DadJokesAPI.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/bin/Debug/netcoreapp2.0/DadJokesAPI.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/bin/Debug/netcoreapp2.0/DadJokesAPI.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/bin/Debug/netcoreapp2.0/DadJokesAPI.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/bin/Debug/netcoreapp2.0/DadJokesAPI.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/obj/Debug/netcoreapp2.0/DadJokesAPI.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/obj/Debug/netcoreapp2.0/DadJokesAPI.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/obj/Debug/netcoreapp2.0/DadJokesAPI.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/obj/Debug/netcoreapp2.0/DadJokesAPI.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/DadJokesAPI/obj/Debug/netcoreapp2.0/DadJokesAPI.pdb

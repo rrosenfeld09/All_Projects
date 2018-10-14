@@ -1,0 +1,35 @@
+@model InboxViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inbox</title>
+</head>
+<body>
+    <h1>yo, welcome to the inbox, @Model.loggedUser.email</h1>
+    <h4 style="color:purple;">@Model.joke</h4>
+    <fieldset>
+        <h3>Here are your emails:</h3>
+        @{
+            foreach(var email in @Model.emails)
+            {
+                <fieldset>
+                    <p>from: @email.user.email</p>
+                    <form action="/email_details/@email.email_id">
+                        <input type="submit" value="@email.message">                    
+                    </form>
+                </fieldset>
+            }
+        }
+
+    </fieldset>
+    <form action="/write_email">
+        <input type="submit" value="Compose Email">
+    </form>
+
+    <a href="/logout">Logout</a>
+</body>
+</html>
