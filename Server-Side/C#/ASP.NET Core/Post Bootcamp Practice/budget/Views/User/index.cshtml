@@ -1,0 +1,33 @@
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Budget</title>
+    </head>
+    <body>
+        <h3>Welcome to the budget calculator. Let's save some money.</h3>
+        <h1>Sign Up</h1>
+        <span>@TempData["error"]</span>
+        <form asp-action="CreateUser" asp-controller="User" method="POST">
+            <span asp-validation-for="name"></span>
+            <input asp-for="name" placeholder="Your name">
+            
+            <span asp-validation-for="email"></span>
+            <input asp-for="email" placeholder="Email">
+
+            <span asp-validation-for="password"></span>
+            <input asp-for="password" placeholder="Passoword" type="password">
+
+            <span asp-validation-for="confirm_pw"></span>
+            <input asp-for="confirm_pw" placeholder="Confirm Password" type="password">
+
+            <input type="submit" value = "Register">
+        </form>
+        <h1>Sign In</h1>
+
+    </body>
+</html>

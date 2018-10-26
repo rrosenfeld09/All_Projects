@@ -1,0 +1,10 @@
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/bin/Debug/netcoreapp2.0/budget.deps.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/bin/Debug/netcoreapp2.0/budget.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/bin/Debug/netcoreapp2.0/budget.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/bin/Debug/netcoreapp2.0/budget.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/bin/Debug/netcoreapp2.0/budget.pdb
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/obj/Debug/netcoreapp2.0/budget.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/obj/Debug/netcoreapp2.0/budget.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/obj/Debug/netcoreapp2.0/budget.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/obj/Debug/netcoreapp2.0/budget.dll
+/Users/richardrosenfeld/Documents/Learning/Coding Dojo/C#/PracticeProjects/budget/obj/Debug/netcoreapp2.0/budget.pdb
