@@ -1,0 +1,21 @@
+-WHAT SHOULD THIS APP DO?
+-edit personal information
+-ability to team up with friends for saving competition. winner gets something?
+-customize financial goals -> pay off CC debt, save for retirnement, save for vacation
+-users can add contact information (cell phone) to receive reminder texts
+
+
+
+-SECURITY CONCERNS BEFORE DEPLOYMENT:
+1) Twilio API keys
+2) appsettings.json DB password
+
+
+
+-make CSS improvements 
+
+
+
+
+
+TREAT THIS LIKE A PRODUCTION APPLICATION

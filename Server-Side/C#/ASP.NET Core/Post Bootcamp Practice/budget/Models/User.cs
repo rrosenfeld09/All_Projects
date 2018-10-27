@@ -9,16 +9,18 @@ namespace budget.Models
         [Key]
         public int user_id {get; set;}
 
-        [Required]
+        [Required (ErrorMessage = "Name can't be blank")]
         public string name {get; set;}
 
-        [Required]
+        [Required (ErrorMessage = "Email address can't be blank")]
+
         public string email {get; set;}
 
-        [Required]
+        [Required (ErrorMessage = "Password can't be blank")]
+
         public string password {get; set;}
 
-        [Required]
+        [Required (ErrorMessage = "Password confirmation can't be blank")]
         [NotMapped]
         public string confirm_pw {get; set;}
 
@@ -31,5 +33,14 @@ namespace budget.Models
             created_at = DateTime.Now;
             updated_at = DateTime.Now;
         }
+    }
+
+    public class LoginUser
+    {
+        [Required (ErrorMessage = "Email can't be blank")]
+        public string email {get; set;}
+
+        [Required (ErrorMessage = "Password can't be blank")]
+        public string password {get; set;}
     }
 }
