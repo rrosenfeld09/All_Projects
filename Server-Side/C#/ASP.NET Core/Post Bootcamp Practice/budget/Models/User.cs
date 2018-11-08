@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,8 +14,12 @@ namespace budget.Models
         public string name {get; set;}
 
         [Required (ErrorMessage = "Email address can't be blank")]
-
+        [EmailAddress]
         public string email {get; set;}
+
+        [Required]
+        [StringLength(10, MinimumLength = 10, ErrorMessage="Phone number must be exactly 10 digits")]
+        public string phone {get; set;}
 
         [Required (ErrorMessage = "Password can't be blank")]
 
@@ -28,8 +33,11 @@ namespace budget.Models
 
         public DateTime updated_at {get; set;}
 
+        public List<PasswordResetCode> passwordresetcodes {get; set;}
+
         public User()
         {
+            passwordresetcodes = new List<PasswordResetCode>();
             created_at = DateTime.Now;
             updated_at = DateTime.Now;
         }

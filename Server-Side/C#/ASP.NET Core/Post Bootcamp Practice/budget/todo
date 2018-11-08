@@ -1,5 +1,5 @@
 -WHAT SHOULD THIS APP DO?
--edit personal information
+-edit personal information (including phone)
 -admin dashboard
 -ability to team up with friends for saving competition. winner gets something?
 -customize financial goals -> pay off CC debt, save for retirnement, save for vacation
@@ -8,7 +8,7 @@
 
 
 
--SECURITY CONCERNS BEFORE DEPLOYMENT:
+SECURITY CONCERNS BEFORE DEPLOYMENT:
 1) Twilio API keys
 2) appsettings.json DB password
 
@@ -17,3 +17,6 @@
 -make CSS improvements 
 
 
+WHEN THIS APP CAN DO:
+-Login/register (with validations)
+-password reset with twilio

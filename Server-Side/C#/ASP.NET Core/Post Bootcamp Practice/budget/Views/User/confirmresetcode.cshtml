@@ -1,0 +1,11 @@
+
+<h1>Please enter your code and password reset below</h1>
+<span id = "error">@TempData["error"]</span>
+<form action="/resetpassword/post" method="POST">
+    <input type="text" name="email" placeholder="Email Address">
+    <input type="text" name="code" placeholder="SMS Code">
+    <input type="password" name="password" placeholder="New Password">
+    <input type="password" name="confirm_pw" placeholder="Confirm Password">
+    <input type="submit" value="Update Password">
+</form>
+

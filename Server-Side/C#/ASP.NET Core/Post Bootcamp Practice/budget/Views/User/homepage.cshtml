@@ -1,0 +1,9 @@
+@model HomePageViewModel
+
+<h1>Welcome to Your Budget Homepage, @Model.user.name</h1>
+
+<form action="/user/@Model.user.user_id/edit">
+    <input type="submit" value="Edit Profile Info">
+</form>
+
+<a href="/logout">Logout</a>

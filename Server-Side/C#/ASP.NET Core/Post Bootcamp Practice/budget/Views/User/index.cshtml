@@ -6,16 +6,19 @@
 <p><span id = "error">@TempData["error"]</span></p> 
 <p><span id = "error" asp-validation-for="user.name"></span></p> 
 <p><span id = "error" asp-validation-for="user.email"></span></p> 
+<p><span id = "error" asp-validation-for="user.phone"></span></p> 
 <p><span id = "error" asp-validation-for="user.password"></span></p> 
 <p><span id = "error" asp-validation-for="user.confirm_pw"></span></p> 
 
 <form asp-action="CreateUser" asp-controller="User" method="POST">
     
-    <input asp-for="user.name" placeholder="Your name">
+    <input asp-for="user.name" placeholder="Name">
     
-    <input asp-for="user.email" placeholder="Email">
+    <input asp-for="user.email" placeholder="Email" type="email">
 
-    <input asp-for="user.password" placeholder="Passoword" type="password">
+    <input asp-for="user.phone" placeholder="Phone xxxxxxxxxx">
+
+    <input asp-for="user.password" placeholder="Password" type="password">
 
     <input asp-for="user.confirm_pw" placeholder="Confirm Password" type="password">
 
@@ -33,5 +36,7 @@
 
     <input type="submit" value = "Login">
 </form>
+
+<a href="/resetpassword/get">Forgot your password?</a>
 
 
