@@ -35,6 +35,8 @@ namespace budget.Models
 
         public List<PasswordResetCode> passwordresetcodes {get; set;}
 
+        public Goal goal {get; set;}
+
         public User()
         {
             passwordresetcodes = new List<PasswordResetCode>();

@@ -62,7 +62,7 @@ namespace budget.Controllers
 
                         HttpContext.Session.SetInt32("loggedUser", returnedUser.user_id);
 
-                        return RedirectToAction("HomePage");
+                        return RedirectToAction("CreateProfileProperties", "Goal");
 
                     }
                     TempData["error"] = "Already registered, please sign in";
@@ -108,6 +108,7 @@ namespace budget.Controllers
             {
                 HomePageViewModel viewModel = new HomePageViewModel();
                 viewModel.user = _context.users.Where(p => p.user_id == HttpContext.Session.GetInt32("loggedUser")).FirstOrDefault();
+                viewModel.goal = _context.goals.Where(p => p.user_id == HttpContext.Session.GetInt32("loggedUser")).FirstOrDefault();
 
                 return View(viewModel);
             }
@@ -140,25 +141,30 @@ namespace budget.Controllers
         }
 
         [HttpPost("user/{user_id}/update")]
-        public IActionResult UpdateUserInfo(int user_id, string name, string email)
+        public IActionResult UpdateUserInfo(int user_id, string name, string email, string phone)
         {
             if(IsUserInSession())
             {
                 if(user_id == HttpContext.Session.GetInt32("loggedUser"))
                 {
-                    if(name != null || email != null)
+                    if(name != null || email != null || phone != null)
                     {
                         User userToUpdate = _context.users.Where(p => p.user_id == user_id).FirstOrDefault();
                         if(name != null)
                         {
                             userToUpdate.name = name;
-                            _context.SaveChanges();
                         }
                         if(email != null)
                         {
                             userToUpdate.email = email;
-                            _context.SaveChanges();
                         }
+                        if(phone != null)
+                        {
+                            userToUpdate.phone = phone;
+                        }
+                        _context.SaveChanges();
+                        SendText(Int64.Parse(userToUpdate.phone), "Looks like you changed some of your account info. If you didn't authorize this, please login");
+
                         return RedirectToAction("Homepage");
                     }
                 }
@@ -255,6 +261,19 @@ namespace budget.Controllers
             }
             TempData["error"] = "Can't be blank";
             return View("confirmresetcode");
+        }
+
+        [HttpGet("user/{user_id}/delete")]
+        public IActionResult DeleteUser(int user_id)
+        {
+            if(user_id == HttpContext.Session.GetInt32("loggedUser"))
+            {
+                User returnedUser = _context.users.Where(p => p.user_id == user_id).FirstOrDefault();
+                _context.Remove(returnedUser);
+                _context.SaveChanges();
+            }
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
         }
     }
 }

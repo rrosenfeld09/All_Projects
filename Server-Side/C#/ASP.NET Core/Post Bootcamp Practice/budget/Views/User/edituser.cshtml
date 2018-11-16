@@ -1,12 +1,16 @@
 @model User
 
-<h1>here we can edit things for @Model.name</h1>
+<h1>What would you like to modify, @Model.name?</h1>
 
-<h3>What do you want to change?</h3>
 <form action="/user/@Model.user_id/update" method="POST">
     <input type="text" name="name" placeholder="@Model.name">
     <input type="text" name="email" placeholder="@Model.email">
+    <input type="test" name="phone" placeholder="@Model.phone">
     <input type="submit" value="Update Info">
 </form>
+
+<p><a href="/user/@Model.user_id/delete">Delete Account</a></p> 
+
+<hr>
 
 <a href="/homepage/get">HomePage</a>

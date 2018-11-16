@@ -1,0 +1,28 @@
+@model Goal
+
+<h1>info</h1>
+<span id="error" asp-validation-for="annual_income"></span>
+<span id="error" asp-validation-for="monthly_living_expenses"></span>
+<span id="error" asp-validation-for="monthly_debt_payments"></span>
+<span id="error" asp-validation-for="discret_spend"></span>
+<span id="error" asp-validation-for="goal"></span>
+
+<form asp-action="CreateGoal" asp-controller="Goal" method="POST">
+    
+    <label asp-for="annual_income">Annual Income</label>
+    <input asp-for="annual_income">
+
+    <label asp-for="monthly_living_expenses">Monthly Living Expenses</label>
+    <input asp-for="monthly_living_expenses">
+
+    <label asp-for="monthly_debt_payments">Monthly Debt Payments</label>
+    <input asp-for="monthly_debt_payments">
+
+    <label asp-for="discret_spend">Monthly Desired Discretionary Spend</label>
+    <input asp-for="discret_spend">
+
+    <label asp-for="goal">Your Financial Goal</label>
+    <input asp-for="goal">
+
+    <input type="submit" value="Confirm Info!">
+</form>

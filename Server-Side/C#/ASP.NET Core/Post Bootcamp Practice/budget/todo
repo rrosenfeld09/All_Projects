@@ -1,10 +1,7 @@
 -WHAT SHOULD THIS APP DO?
--edit personal information (including phone)
--admin dashboard
 -ability to team up with friends for saving competition. winner gets something?
 -customize financial goals -> pay off CC debt, save for retirnement, save for vacation
--users can add contact information (cell phone) to receive reminder texts
--when user changes their info, send text message to user
+-users can receive reminder texts
 
 
 
@@ -20,3 +17,9 @@ SECURITY CONCERNS BEFORE DEPLOYMENT:
 WHEN THIS APP CAN DO:
 -Login/register (with validations)
 -password reset with twilio
+-edit personal information (including phone)
+-when user changes their info, send text message to user
+-delete account
+
+
+

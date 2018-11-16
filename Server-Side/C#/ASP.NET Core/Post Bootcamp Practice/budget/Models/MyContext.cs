@@ -8,4 +8,6 @@ public class MyContext : DbContext
     public DbSet<User> users {get; set;}
 
     public DbSet<PasswordResetCode> password_reset_codes {get; set;}
+
+    public DbSet<Goal> goals {get; set;}
 }
