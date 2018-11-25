@@ -13,7 +13,13 @@ namespace budget.Models
         public long annual_income {get; set;}
 
         [Required]
+        public long total_savings {get; set;}
+
+        [Required]
         public int monthly_living_expenses {get; set;}
+
+        [Required]
+        public long total_debt {get; set;}
 
         [Required]
         public int monthly_debt_payments {get; set;}

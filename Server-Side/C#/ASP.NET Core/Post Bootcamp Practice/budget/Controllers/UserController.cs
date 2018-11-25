@@ -110,6 +110,14 @@ namespace budget.Controllers
                 viewModel.user = _context.users.Where(p => p.user_id == HttpContext.Session.GetInt32("loggedUser")).FirstOrDefault();
                 viewModel.goal = _context.goals.Where(p => p.user_id == HttpContext.Session.GetInt32("loggedUser")).FirstOrDefault();
 
+                // some logic to break down finances
+                Goal returnedGoal = _context.goals.Where(p => p.user_id == HttpContext.Session.GetInt32("loggedUser")).FirstOrDefault();
+
+                double monthly_income = returnedGoal.annual_income / 12;
+                viewModel.monthly_income = monthly_income;
+
+
+
                 return View(viewModel);
             }
             else

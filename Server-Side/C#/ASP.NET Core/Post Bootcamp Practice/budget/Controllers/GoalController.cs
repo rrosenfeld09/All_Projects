@@ -49,5 +49,26 @@ namespace budget.Controllers
             return RedirectToAction("Index", "User");
 
         }
+
+        [HttpPost("left_over_adj")]
+        public IActionResult LeftOverAdj(string option, int user_id, int amount)
+        {
+            Goal returnedGoal = _context.goals.Where(p => p.user_id == HttpContext.Session.GetInt32("loggedUser")).FirstOrDefault();
+
+            if(user_id == HttpContext.Session.GetInt32("loggedUser") && amount > 0)
+            {
+                if(option == "debt_payoff")
+                {
+                    returnedGoal.total_debt -= amount;
+                }
+                if(option == "savings")
+                {
+                    returnedGoal.total_savings += amount;
+                }
+                _context.SaveChanges();
+            }
+
+             return RedirectToAction("HomePage", "User");
+        }
     }
 }

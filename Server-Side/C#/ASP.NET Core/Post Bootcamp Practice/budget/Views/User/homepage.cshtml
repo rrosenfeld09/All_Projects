@@ -2,8 +2,46 @@
 
 <h1>Welcome to Your Budget Homepage, @Model.user.name</h1>
 
-<h2>Your financial goal: @Model.goal.goal</h2>
+<h2>Your Financial Goal: @Model.goal.goal</h2>
 
+<fieldset>
+    <h3>Let's break some things down...</h3>
+    <p>Your monthly income: $@Model.monthly_income</p>
+    @{
+        int total_expense = @Model.goal.monthly_debt_payments + @Model.goal.discret_spend + @Model.goal.monthly_living_expenses;
+        int left_over = (int)(@Model.goal.annual_income / 12) - total_expense;
+    }
+    <p>Your total savings: $@Model.goal.total_savings</p>
+    <p>Your total debt: $@Model.goal.total_debt</p>
+    <p>Monthly Debt Payments: $@Model.goal.monthly_debt_payments</p>
+    <p>Monthly Living Expenses: $@Model.goal.monthly_living_expenses</p>
+    <p>Monthly Discretionary Spending: $@Model.goal.discret_spend</p>
+    @{
+        if(@left_over > 0)
+        {
+            <h4>That means you have $@left_over left over each month! What would you like to do with it?</h4>
+            <form asp-action="LeftOverAdj" asp-controller="Goal" method="POST">
+                <select asp-for="option">
+                    <option value="debt_payoff">Pay off more debt</option>
+                    @{
+                        if(@Model.goal.total_debt > 0)
+                        {
+                            <option value="savings">Put into savings</option>
+                        }
+                    }
+                </select>
+                <input type="hidden" asp-for="user_id" value="@Model.user.user_id">
+                <input type="hidden" asp-for="left_over" value=@left_over>
+                $<input asp-for="amount">
+                <input type="submit">
+            </form>
+        }
+        else
+        {
+            <h4>Your montly expenses are greater than your income</h4>
+        }
+    }
+</fieldset>
 <form action="/user/@Model.user.user_id/edit">
     <input type="submit" value="Edit Profile Info">
 </form>
