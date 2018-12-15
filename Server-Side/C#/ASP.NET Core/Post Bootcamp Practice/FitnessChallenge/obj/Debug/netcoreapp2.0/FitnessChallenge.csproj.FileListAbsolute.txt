@@ -1,0 +1,10 @@
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/bin/Debug/netcoreapp2.0/FitnessChallenge.deps.json
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/bin/Debug/netcoreapp2.0/FitnessChallenge.runtimeconfig.json
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/bin/Debug/netcoreapp2.0/FitnessChallenge.runtimeconfig.dev.json
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/bin/Debug/netcoreapp2.0/FitnessChallenge.dll
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/bin/Debug/netcoreapp2.0/FitnessChallenge.pdb
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/obj/Debug/netcoreapp2.0/FitnessChallenge.csproj.CoreCompileInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/obj/Debug/netcoreapp2.0/FitnessChallenge.AssemblyInfoInputs.cache
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/obj/Debug/netcoreapp2.0/FitnessChallenge.AssemblyInfo.cs
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/obj/Debug/netcoreapp2.0/FitnessChallenge.dll
+/Users/richardrosenfeld/Documents/Learning/Perm Personal Projects/FitnessChallenge/obj/Debug/netcoreapp2.0/FitnessChallenge.pdb
