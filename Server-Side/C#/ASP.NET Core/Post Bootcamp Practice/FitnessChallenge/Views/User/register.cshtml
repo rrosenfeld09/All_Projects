@@ -1,0 +1,25 @@
+@model User
+
+<h1 style="text-align: center;">One step closer to getting super fit. Register here.</h1>
+<hr style="margin-bottom: 15px; width: 600px; max-width: 600px;">
+
+<p style="color: red; text-align: center;">@ViewData["error"]</p>
+
+<form style="text-align: center; margin-bottom: 15px;" asp-action="RegisterAction" asp-controller="User" method="POST">
+    <input asp-for="email" placeholder="email address">
+
+    <input asp-for="nickname" placeholder="nickname">
+
+    <input asp-for="password" type="password" placeholder="password">
+
+    <input asp-for="confirm_pw" type="password" placeholder="confirm password">
+
+    <input style="background-color: greenyellow;" type="submit" value="Next: Choose my avatar">
+</form>
+
+<a style="margin-left: 48%;" href="/">Back</a>
+
+<p style="color: red; text-align: center;"><span asp-validation-for="email"></span></p>
+<p style="color: red; text-align: center;"><span asp-validation-for="nickname"></span></p> 
+<p style="color: red; text-align: center;"><span asp-validation-for="password"></span></p>
+<p style="color: red; text-align: center;"><span asp-validation-for="confirm_pw"></span></p>
