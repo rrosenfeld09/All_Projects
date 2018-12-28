@@ -1,12 +1,13 @@
 @model User
 
-<h1>yo, welcome to the homepage, @Model.nickname </h1>
+
 @{
     int avatarid = @Model.avatar_id;
-    string src = $"../img/avatars/avatar_{avatarid}.jpg'";
-<img src=@src alt="pic">
-}
+    string src = $"../img/avatars/avatar_{avatarid}.jpg";
 
+}
+<img style="width: 100px;" src=@src alt="pic">
+<h1>Welcome to the homepage, @Model.nickname</h1>
 
 
 
