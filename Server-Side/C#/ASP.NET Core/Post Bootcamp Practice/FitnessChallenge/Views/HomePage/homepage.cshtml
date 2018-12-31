@@ -4,11 +4,34 @@
 @{
     int avatarid = @Model.avatar_id;
     string src = $"../img/avatars/avatar_{avatarid}.jpg";
+    int total_points = @Model.eating_points + @Model.exercise_points;
 
 }
-<img style="width: 100px;" src=@src alt="pic">
-<h1>Welcome to the homepage, @Model.nickname</h1>
+<img style="width: 100px; display: inline;" src=@src alt="pic">
+<div style="margin-left: 10px;">
+    <h1>Welcome to the homepage, @Model.nickname!</h1>
+    <h3>Point Breakdown:</h3>
+    <h4>Total points = @total_points</h4>
+    <h5>Points for daily exercise = @Model.exercise_points</h5>
+    <h5>Points for healthy eating = @Model.eating_points </h5>
+</div>
+
+
+<div style="margin-left: 10px; display: inline-block;">
+    <form style="margin-bottom: 10px; " action="/add_exercise_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user_id">
+        <input style="background-color:greenyellow;" type="submit" value="I exercised today (1 pt)">
+    </form>
+    <form  action="/add_eating_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user_id">
+        <input style="background-color:greenyellow;" type="submit" value="I ate healthy today (1 pt)">
+    </form>
+    
+    <a href="/logout">Logout</a>
+</div>
+
+<h3 style="display:inline-block; vertical-align:top;">The Leaderboard</h3>
 
 
 
-<a href="/logout">Logout</a>
+

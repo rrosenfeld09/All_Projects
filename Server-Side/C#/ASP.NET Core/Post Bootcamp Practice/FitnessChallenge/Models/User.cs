@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace FitnessChallenge.Models
@@ -33,12 +34,19 @@ namespace FitnessChallenge.Models
         [NotMapped]
         public string confirm_pw {get; set;}
 
+        public int exercise_points {get;set;}
+
+        public int eating_points {get; set;}
+
+
         public DateTime created_at {get; set;}
 
         public DateTime updated_at {get; set;}
 
         public User()
         {
+            exercise_points = 0;
+            eating_points = 0;
             created_at = DateTime.Now;
             updated_at = DateTime.Now;
         }

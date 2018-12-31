@@ -134,6 +134,38 @@ namespace FitnessChallenge.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost("add_exercise_points")]
+        public IActionResult AddExercisePoints(int user_id)
+        {
+            if(IsUserInSession())
+            {
+                if(user_id == HttpContext.Session.GetInt32("loggedUser"))
+                {
+                    User returnedUser = _context.users.Where(p => p.user_id == user_id).FirstOrDefault();
+                    returnedUser.exercise_points += 1;
+                    _context.SaveChanges();
+                    return RedirectToAction("HomePage", "HomePage");
+                }
+            }
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost("add_eating_points")]
+        public IActionResult AddEatingPoints(int user_id)
+        {
+            if(IsUserInSession())
+            {
+                if(user_id == HttpContext.Session.GetInt32("loggedUser"))
+                {
+                    User returnedUser = _context.users.Where(p => p.user_id == user_id).FirstOrDefault();
+                    returnedUser.eating_points += 1;
+                    _context.SaveChanges();
+                    return RedirectToAction("HomePage", "HomePage");
+                }
+            }
+            return RedirectToAction("Index");
+        }
+
 
     }
 }
