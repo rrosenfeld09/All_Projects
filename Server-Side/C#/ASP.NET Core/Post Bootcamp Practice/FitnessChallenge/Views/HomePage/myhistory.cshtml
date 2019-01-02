@@ -1,0 +1,49 @@
+@model HistoryViewModel
+
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
+<h1>Here's the great work you've done so far!</h1>
+<p><a style="margin-top: 5px; margin-bottom:10px;" href="/homePage">Home</a></p> 
+<table id="customers">
+    <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Number of Points</th>
+    </tr>
+
+@{
+    foreach(var log in @Model.logs)
+    {
+        <tr>
+            <td>@log.created_at</td>
+            <td>@log.description</td>
+            <td>@log.num_points</td>
+        </tr>
+    }
+}
+</table>
+
+<p><a style="margin-top: 5px;" href="/homePage">Home</a></p> 

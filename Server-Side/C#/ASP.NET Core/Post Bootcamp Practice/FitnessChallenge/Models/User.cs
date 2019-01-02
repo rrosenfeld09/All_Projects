@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+
 
 
 namespace FitnessChallenge.Models
@@ -34,9 +36,11 @@ namespace FitnessChallenge.Models
         [NotMapped]
         public string confirm_pw {get; set;}
 
-        public int exercise_points {get;set;}
+        public float exercise_points {get;set;}
 
-        public int eating_points {get; set;}
+        public float eating_points {get; set;}
+
+        public float total_points {get; set;}
 
 
         public DateTime created_at {get; set;}
@@ -47,6 +51,7 @@ namespace FitnessChallenge.Models
         {
             exercise_points = 0;
             eating_points = 0;
+            total_points = 0;
             created_at = DateTime.Now;
             updated_at = DateTime.Now;
         }

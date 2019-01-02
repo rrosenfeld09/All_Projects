@@ -8,5 +8,9 @@ namespace FitnessChallenge.Models
 
         public DbSet<User> users {get; set;}
 
+        public DbSet<Log> logs {get; set;}
+
+        public DbSet<Comment> comments {get; set;}
+
     }
 }

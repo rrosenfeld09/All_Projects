@@ -1,36 +1,173 @@
-@model User
+@model HomePageVM
 
 
 @{
-    int avatarid = @Model.avatar_id;
+    int avatarid = @Model.user.avatar_id;
     string src = $"../img/avatars/avatar_{avatarid}.jpg";
-    int total_points = @Model.eating_points + @Model.exercise_points;
 
 }
+<div style="width:970px; margin: auto; padding: 10px;">
+
+ <div style="text-align:right;">
+    <a style="margin-top:0x; margin-bottom:5px;text-align:right;" href="/history">View My History</a> |
+    <a style="margin-top:0x; margin-bottom:5px;text-align:right;" href="/darulz">Da Rulz</a> |
+    <a style="margin-top:0x; margin-bottom:5px;text-align:right; "  href="/logout">Logout</a> 
+ </div>
+<img style="height:300px; border-radius:10px; display:block; margin-left:auto; margin-right:auto;" src="../img/lifting.png" alt="">
+<p style="font-style:italic; text-align:right; font-size:14px; margin-left:350px; margin-bottom:10px;">*actual photo of Matt on 2/1/19</p>
+</div>
+<hr style="max-width: 900px; margin-top:0px;">
 <img style="width: 100px; display: inline;" src=@src alt="pic">
-<div style="margin-left: 10px;">
-    <h1>Welcome to the homepage, @Model.nickname!</h1>
-    <h3>Point Breakdown:</h3>
-    <h4>Total points = @total_points</h4>
-    <h5>Points for daily exercise = @Model.exercise_points</h5>
-    <h5>Points for healthy eating = @Model.eating_points </h5>
+
+
+<h1 style="margin-top: 10px; margin-bottom:10px;">Welcome to fitness headquarters, @Model.user.nickname!</h1>
+<div style="text-align:center;">
+<div style="margin-left: 10px; display:inline-block; margin-right:30px;">
+    <h3 style="text-decoration:underline;">Your Point Breakdown:</h3>
+    <h4>Total points = @Model.user.total_points</h4>
+    <h5>Points for daily exercise = @Model.user.exercise_points</h5>
+    <h5>Points for healthy eating = @Model.user.eating_points </h5>
 </div>
 
-
-<div style="margin-left: 10px; display: inline-block;">
-    <form style="margin-bottom: 10px; " action="/add_exercise_points" method="POST">
-        <input type="hidden" name="user_id" value="@Model.user_id">
-        <input style="background-color:greenyellow;" type="submit" value="I exercised today (1 pt)">
-    </form>
-    <form  action="/add_eating_points" method="POST">
-        <input type="hidden" name="user_id" value="@Model.user_id">
-        <input style="background-color:greenyellow;" type="submit" value="I ate healthy today (1 pt)">
-    </form>
-    
-    <a href="/logout">Logout</a>
+<div style="display:inline-block; vertical-align:top; margin-left:30px;font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif'" >
+    <h3 style="text-decoration:underline;">Leaderboard:</h3>
+    <ol>
+    @{
+        foreach(var user in @Model.userRanking)
+        {
+            int avatarid_3 = @user.avatar_id;
+            string src_3 = $"../img/avatars/avatar_{avatarid_3}.jpg";
+            <li style="font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif'; font-weight:200; letter-spacing:1px;" >@user.nickname (@user.total_points pts) <img style="width:30px; vertical-align:middle;" src="@src_3" alt="avatar"></li>
+        }
+    }
+    </ol>  
+</div>
 </div>
 
-<h3 style="display:inline-block; vertical-align:top;">The Leaderboard</h3>
+<hr style="max-width: 900px; margin-bottom: 25px;">
+<h3 style="text-align:center;">What'd you get done today?</h3>
+<div style="text-align:center; margin-bottom:25px;">
+<fieldset style="display:inline-block; vertical-align:top;">
+    <legend>Cardio</legend>
+    <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value=".5">
+        <input type="hidden" name="description" value = "ran/walked 30 mins">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ran/walked 30 mins today (.5 pts)">
+    </form>
+        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value="1">
+        <input type="hidden" name="description" value = "ran/walked 60 mins">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ran/walked 60 mins today (1 pt)">
+    </form>
+        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value="1.5">
+        <input type="hidden" name="description" value = "ran/walked 90 mins">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ran/walked 90 mins today (1.5 pts)">
+    </form>
+</fieldset>
+
+<fieldset style="display:inline-block; vertical-align:top;">
+    <legend>Climbing</legend>
+    <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value="1">
+        <input type="hidden" name="description" value = "climbed">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I climbed today (1 pt)">
+    </form>
+</fieldset>
+
+<fieldset style="display:inline-block; vertical-align:top;">
+    <legend>Gym/Strength Training</legend>
+    <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value="1">
+        <input type="hidden" name="description" value = "went to the gym">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I went to the gym today (1 pt)">
+    </form>
+</fieldset>
+</div>
+<div style="text-align:center;">
+<fieldset style="display:inline-block; vertical-align:top;">
+    <legend>Other</legend>
+        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value=".5">
+        <input type="hidden" name="description" value = "'othered' 30 mins">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I 'othered' 30 mins today (.5 pts)">
+    </form>
+        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value="1">
+        <input type="hidden" name="description" value = "'othered' 60 mins">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I 'othered' 60 mins today (1 pt)">
+    </form>
+        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value="1.5">
+        <input type="hidden" name="description" value = "'othered' 90 mins">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I 'othered' 90 mins today (1.5 pts)">
+    </form>
+</fieldset>
+
+<fieldset style="display:inline-block; vertical-align:top;">
+    <legend>Consume Right</legend>
+    <form  action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="eating_point">
+        <input type="hidden" name="point_value" value="2">
+        <input type="hidden" name="description" value = "ate healthy">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ate healthy today (2 pt)">
+    </form>
+</fieldset>
+</div>
+<hr style="max-width: 900px;">
+
+<fieldset style="text-align:center;">
+    <h2>Let's keep each other motivated!</h2>
+    <h5>Use negative (or positive, if that's your thing) reinforement to help your friends along the way</h5>
+    <form action="/add/comment" method="POST">
+        <input type="hidden" name="user_id" value = "@Model.user.user_id">
+        <input type="hidden" name="user_nickname" value = "@Model.user.nickname">
+        <input type="hidden" name="avatar_id" value="@Model.user.avatar_id">
+        <input type="text" name="comment" placeholder="write comment here..">
+        <input type="submit" value="flex on it">
+    </form>
+    @{
+        foreach(var comment in @Model.comments)
+        {
+            
+                int avatarid_2 = @comment.avatar_id;
+                string src_2 = $"../img/avatars/avatar_{avatarid_2}.jpg";
+            
+            <p style="display:inline-block; margin:2px;">@comment.comment - <div style="display:inline-block; font-style:italic; margin:0px;">@comment.user_nickname </div>
+                <img style="width:30px;" src="@src_2" alt="avatar"></p>
+            if(@Model.user.user_id == @comment.user_id)
+            {
+                <p style="margin-bottom:0px; margin-top:0px; font-size:13px; font-style:italic;"><a href="/delete/@comment.comment_id/@comment.user_id">delete post</a></p> 
+            }
+            <hr style="max-width: 200px; margin-top:0px; margin-bottom:0px;">
+        }
+    }
+</fieldset>
+
+<hr style="max-width: 900px; margin-top:0px; margin-bottom:15px; margin-top: 5px;">
+<p style="text-align:center; font-style:italic;">A Bexercise Production</p>
+
+
+
+
+
 
 
 

@@ -134,38 +134,40 @@ namespace FitnessChallenge.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost("add_exercise_points")]
-        public IActionResult AddExercisePoints(int user_id)
+        [HttpPost("add_points")]
+        public IActionResult AddPoints(int user_id, string point_type, float point_value, string description)
         {
             if(IsUserInSession())
             {
-                if(user_id == HttpContext.Session.GetInt32("loggedUser"))
+                User returnedUser = _context.users.Where(p => p.user_id == user_id).FirstOrDefault();
+                if(point_type == "exercise_point")
                 {
-                    User returnedUser = _context.users.Where(p => p.user_id == user_id).FirstOrDefault();
-                    returnedUser.exercise_points += 1;
-                    _context.SaveChanges();
-                    return RedirectToAction("HomePage", "HomePage");
+                    returnedUser.exercise_points += point_value;
                 }
+                if(point_type == "eating_point")
+                {
+                    returnedUser.eating_points += point_value;
+                }
+
+                _context.SaveChanges();
+
+
+                User returnedUserTotalPointUpdate = _context.users.Where(p => p.user_id == user_id).FirstOrDefault();
+                returnedUserTotalPointUpdate.total_points = returnedUserTotalPointUpdate.eating_points + returnedUserTotalPointUpdate.exercise_points;
+                _context.SaveChanges();
+
+                Log addThisLog = new Log();
+                addThisLog.user_id=user_id;
+                addThisLog.num_points=point_value;
+                addThisLog.description=description;
+                _context.logs.Add(addThisLog);
+                _context.SaveChanges();
+
+                return RedirectToAction("HomePage", "HomePage");
+                
             }
             return RedirectToAction("Index");
         }
-
-        [HttpPost("add_eating_points")]
-        public IActionResult AddEatingPoints(int user_id)
-        {
-            if(IsUserInSession())
-            {
-                if(user_id == HttpContext.Session.GetInt32("loggedUser"))
-                {
-                    User returnedUser = _context.users.Where(p => p.user_id == user_id).FirstOrDefault();
-                    returnedUser.eating_points += 1;
-                    _context.SaveChanges();
-                    return RedirectToAction("HomePage", "HomePage");
-                }
-            }
-            return RedirectToAction("Index");
-        }
-
 
     }
 }
