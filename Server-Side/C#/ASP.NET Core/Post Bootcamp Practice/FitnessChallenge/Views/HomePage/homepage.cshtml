@@ -1,11 +1,7 @@
 @model HomePageVM
 
 
-@{
-    int avatarid = @Model.user.avatar_id;
-    string src = $"../img/avatars/avatar_{avatarid}.jpg";
 
-}
 <div style="width:970px; margin: auto; padding: 10px;">
 
  <div style="text-align:right;">
@@ -17,7 +13,12 @@
 <p style="font-style:italic; text-align:right; font-size:14px; margin-left:350px; margin-bottom:10px;">*actual photo of Matt on 2/1/19</p>
 </div>
 <hr style="max-width: 900px; margin-top:0px;">
-<img style="width: 100px; display: inline;" src=@src alt="pic">
+@{
+    int avatarid = @Model.user.avatar_id;
+    string src = $"../img/avatars/avatar_{avatarid}.jpg";
+    <img style="width: 100px; display: inline;" src="@src" alt="pic">
+}
+
 
 
 <h1 style="margin-top: 10px; margin-bottom:10px;">Welcome to fitness headquarters, @Model.user.nickname!</h1>
@@ -43,6 +44,9 @@
     </ol>  
 </div>
 </div>
+<form action="/do_something">
+    <input type="submit" value="Do Something">
+</form>
 
 <hr style="max-width: 900px; margin-bottom: 25px;">
 <h3 style="text-align:center;">What'd you get done today?</h3>

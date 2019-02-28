@@ -89,5 +89,14 @@ namespace FitnessChallenge.Controllers
             }
             return RedirectToAction("Index", "User");
         }
+
+        [HttpGet("do_something")]
+        public IActionResult DoSomething()
+        {
+            Console.WriteLine("==============================================================================");
+            Console.WriteLine("haha, nice...");
+            Console.WriteLine("==============================================================================");
+            return RedirectToAction("HomePage");
+        }
     }
 }

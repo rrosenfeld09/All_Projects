@@ -27,8 +27,9 @@ namespace FitnessChallenge.Models
 
         public Log()
         {
-            created_at = DateTime.Now;
-            updated_at = DateTime.Now;
+            created_at = DateTime.UtcNow.AddHours(-5);
+            updated_at = DateTime.UtcNow.AddHours(-5);
+            
         }
     }
 }

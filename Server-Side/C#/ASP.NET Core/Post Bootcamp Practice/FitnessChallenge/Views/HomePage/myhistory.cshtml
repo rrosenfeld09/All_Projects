@@ -38,7 +38,9 @@
     foreach(var log in @Model.logs)
     {
         <tr>
-            <td>@log.created_at</td>
+            <td>@log.created_at.ToString("MM/dd/yyyy")
+
+            </td>
             <td>@log.description</td>
             <td>@log.num_points</td>
         </tr>
