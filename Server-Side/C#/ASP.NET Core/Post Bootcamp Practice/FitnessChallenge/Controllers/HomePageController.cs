@@ -80,23 +80,5 @@ namespace FitnessChallenge.Controllers
             return RedirectToAction("Index", "User");
         }
 
-        [HttpGet("darulz")]
-        public IActionResult DaRulz()
-        {
-            if(IsUserInSession())
-            {
-                return View();
-            }
-            return RedirectToAction("Index", "User");
-        }
-
-        [HttpGet("do_something")]
-        public IActionResult DoSomething()
-        {
-            Console.WriteLine("==============================================================================");
-            Console.WriteLine("haha, nice...");
-            Console.WriteLine("==============================================================================");
-            return RedirectToAction("HomePage");
-        }
     }
 }

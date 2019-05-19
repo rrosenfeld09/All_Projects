@@ -6,11 +6,10 @@
 
  <div style="text-align:right;">
     <a style="margin-top:0x; margin-bottom:5px;text-align:right;" href="/history">View My History</a> |
-    <a style="margin-top:0x; margin-bottom:5px;text-align:right;" href="/darulz">Da Rulz</a> |
     <a style="margin-top:0x; margin-bottom:5px;text-align:right; "  href="/logout">Logout</a> 
  </div>
-<img style="height:300px; border-radius:10px; display:block; margin-left:auto; margin-right:auto;" src="../img/lifting.png" alt="">
-<p style="font-style:italic; text-align:right; font-size:14px; margin-left:350px; margin-bottom:10px;">*actual photo of Matt on 2/1/19</p>
+<img style="height:300px; border-radius:10px; display:block; margin-left:auto; margin-right:auto;" src="../img/runner.png" alt="">
+<p style="font-style:italic; text-align:right; font-size:14px; margin-left:350px; margin-bottom:10px;">*actual photo of Matt on 6/13/19</p>
 </div>
 <hr style="max-width: 900px; margin-top:0px;">
 @{
@@ -44,94 +43,76 @@
     </ol>  
 </div>
 </div>
-<form action="/do_something">
-    <input type="submit" value="Do Something">
-</form>
+
 
 <hr style="max-width: 900px; margin-bottom: 25px;">
 <h3 style="text-align:center;">What'd you get done today?</h3>
 <div style="text-align:center; margin-bottom:25px;">
 <fieldset style="display:inline-block; vertical-align:top;">
-    <legend>Cardio</legend>
+    <legend>Cardio (max points: 2)</legend>
+    <form style="margin-bottom: 10px; " action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="exercise_point">
+        <input type="hidden" name="point_value" value="1">
+        <input type="hidden" name="description" value = "ran 30 mins">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ran 30 mins today (1 pts)">
+    </form>
     <form style="margin-bottom: 10px; " action="/add_points" method="POST">
         <input type="hidden" name="user_id" value="@Model.user.user_id">
         <input type="hidden" name="point_type" value="exercise_point">
         <input type="hidden" name="point_value" value=".5">
-        <input type="hidden" name="description" value = "ran/walked 30 mins">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ran/walked 30 mins today (.5 pts)">
+        <input type="hidden" name="description" value = "walked/hiked 30 mins">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I walked/hiked 30 mins today (.5 pt)">
     </form>
-        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
-        <input type="hidden" name="user_id" value="@Model.user.user_id">
-        <input type="hidden" name="point_type" value="exercise_point">
-        <input type="hidden" name="point_value" value="1">
-        <input type="hidden" name="description" value = "ran/walked 60 mins">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ran/walked 60 mins today (1 pt)">
-    </form>
-        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
-        <input type="hidden" name="user_id" value="@Model.user.user_id">
-        <input type="hidden" name="point_type" value="exercise_point">
-        <input type="hidden" name="point_value" value="1.5">
-        <input type="hidden" name="description" value = "ran/walked 90 mins">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ran/walked 90 mins today (1.5 pts)">
-    </form>
+
 </fieldset>
 
+
 <fieldset style="display:inline-block; vertical-align:top;">
-    <legend>Climbing</legend>
+    <legend>Workout</legend>
     <form style="margin-bottom: 10px; " action="/add_points" method="POST">
         <input type="hidden" name="user_id" value="@Model.user.user_id">
         <input type="hidden" name="point_type" value="exercise_point">
         <input type="hidden" name="point_value" value="1">
-        <input type="hidden" name="description" value = "climbed">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I climbed today (1 pt)">
+        <input type="hidden" name="description" value = "worked out">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I worked out today (1 pt)">
     </form>
 </fieldset>
-
 <fieldset style="display:inline-block; vertical-align:top;">
-    <legend>Gym/Strength Training</legend>
+    <legend>Stretching</legend>
     <form style="margin-bottom: 10px; " action="/add_points" method="POST">
         <input type="hidden" name="user_id" value="@Model.user.user_id">
         <input type="hidden" name="point_type" value="exercise_point">
-        <input type="hidden" name="point_value" value="1">
-        <input type="hidden" name="description" value = "went to the gym">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I went to the gym today (1 pt)">
+        <input type="hidden" name="point_value" value=".5">
+        <input type="hidden" name="description" value = "stretching">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I stretched today (.5 pts)">
     </form>
 </fieldset>
 </div>
 <div style="text-align:center;">
-<fieldset style="display:inline-block; vertical-align:top;">
-    <legend>Other</legend>
-        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
-        <input type="hidden" name="user_id" value="@Model.user.user_id">
-        <input type="hidden" name="point_type" value="exercise_point">
-        <input type="hidden" name="point_value" value=".5">
-        <input type="hidden" name="description" value = "'othered' 30 mins">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I 'othered' 30 mins today (.5 pts)">
-    </form>
-        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
-        <input type="hidden" name="user_id" value="@Model.user.user_id">
-        <input type="hidden" name="point_type" value="exercise_point">
-        <input type="hidden" name="point_value" value="1">
-        <input type="hidden" name="description" value = "'othered' 60 mins">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I 'othered' 60 mins today (1 pt)">
-    </form>
-        <form style="margin-bottom: 10px; " action="/add_points" method="POST">
-        <input type="hidden" name="user_id" value="@Model.user.user_id">
-        <input type="hidden" name="point_type" value="exercise_point">
-        <input type="hidden" name="point_value" value="1.5">
-        <input type="hidden" name="description" value = "'othered' 90 mins">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I 'othered' 90 mins today (1.5 pts)">
-    </form>
-</fieldset>
+
 
 <fieldset style="display:inline-block; vertical-align:top;">
     <legend>Consume Right</legend>
+    <div>
     <form  action="/add_points" method="POST">
         <input type="hidden" name="user_id" value="@Model.user.user_id">
         <input type="hidden" name="point_type" value="eating_point">
-        <input type="hidden" name="point_value" value="2">
-        <input type="hidden" name="description" value = "ate healthy">
-        <input style="background-color:greenyellow; width:338px;" type="submit" value="I ate healthy today (2 pt)">
+        <input type="hidden" name="description" value = "eating healthy meals">
+        <select name="point_value" style="background-color: bisque;">
+            <option value=".5">1 Healthy Meal</option>
+            <option value="1">2 Healthy Meals</option>
+            <option value="1.5">3 Healthy Meals</option>
+        </select>
+        <input style="background-color:greenyellow; width:225px; padding:0px;" type="submit" value="Log my meals (.5 pt/meal)">
+    </div>
+    <form  action="/add_points" method="POST">
+        <input type="hidden" name="user_id" value="@Model.user.user_id">
+        <input type="hidden" name="point_type" value="eating_point">
+        <input type="hidden" name="point_value" value=".5">
+        <input type="hidden" name="description" value = "no alcohol">
+        <input style="background-color:greenyellow; width:338px;" type="submit" value="I didn't drink today (.5 pt)">
+    </form>
     </form>
 </fieldset>
 </div>
